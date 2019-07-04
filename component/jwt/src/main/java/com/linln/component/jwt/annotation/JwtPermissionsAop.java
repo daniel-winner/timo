@@ -1,11 +1,11 @@
-package com.linln.component.jwt.annotation;
+package com.crm.component.jwt.annotation;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.linln.common.exception.ResultException;
-import com.linln.component.jwt.config.properties.JwtProjectProperties;
-import com.linln.component.jwt.enums.JwtResultEnums;
-import com.linln.component.jwt.utlis.JwtUtil;
+import com.crm.common.exception.ResultException;
+import com.crm.component.jwt.config.properties.JwtProjectProperties;
+import com.crm.component.jwt.enums.JwtResultEnums;
+import com.crm.component.jwt.utlis.JwtUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -32,7 +32,7 @@ public class JwtPermissionsAop {
     @Autowired
     private HttpServletRequest request;
 
-    @Pointcut("@annotation(com.linln.component.jwt.annotation.JwtPermissions)")
+    @Pointcut("@annotation(com.crm.component.jwt.annotation.JwtPermissions)")
     public void jwtPermissions() {};
 
     @Around("jwtPermissions()")

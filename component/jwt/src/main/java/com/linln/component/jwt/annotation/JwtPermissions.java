@@ -1,4 +1,4 @@
-package com.linln.component.jwt.annotation;
+package com.crm.component.jwt.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,12 +1,12 @@
-package com.linln.component.jwt.interceptor;
+package com.crm.component.jwt.interceptor;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.linln.common.exception.ResultException;
-import com.linln.component.jwt.annotation.IgnorePermissions;
-import com.linln.component.jwt.config.properties.JwtProjectProperties;
-import com.linln.component.jwt.enums.JwtResultEnums;
-import com.linln.component.jwt.utlis.JwtUtil;
+import com.crm.common.exception.ResultException;
+import com.crm.component.jwt.annotation.IgnorePermissions;
+import com.crm.component.jwt.config.properties.JwtProjectProperties;
+import com.crm.component.jwt.enums.JwtResultEnums;
+import com.crm.component.jwt.utlis.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;

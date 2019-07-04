@@ -33,16 +33,16 @@ CREATE TABLE IF NOT EXISTS `sys_action_log` (
 -- 正在导出表  timo.sys_action_log 的数据：~10 rows (大约)
 /*!40000 ALTER TABLE `sys_action_log` DISABLE KEYS */;
 INSERT INTO `sys_action_log` (`id`, `name`, `type`, `ipaddr`, `clazz`, `method`, `model`, `record_id`, `message`, `create_date`, `oper_name`, `oper_by`) VALUES
-	(1, '角色状态', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'status', NULL, NULL, '删除ID：[15]', '2019-04-28 00:08:45', '超级管理员', 1),
-	(2, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组1', '2019-04-28 00:09:06', '超级管理员', 1),
-	(3, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 3, '更新日志成功：用户组2', '2019-04-28 00:09:17', '超级管理员', 1),
-	(4, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组1', '2019-04-28 00:09:28', '超级管理员', 1),
-	(5, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组', '2019-04-28 00:09:32', '超级管理员', 1),
-	(6, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：开发组', '2019-04-28 00:10:00', '超级管理员', 1),
-	(7, '日志管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.RoleController', 'save', 'sys_role', 3, '更新日志成功：用户组', '2019-04-28 00:11:09', '超级管理员', 1),
-	(8, '菜单状态', 1, '127.0.0.1', 'com.linln.admin.system.controller.MenuController', 'status', NULL, NULL, '删除ID：[6, 2, 7, 16, 15, 17, 18, 19, 20, 4, 5, 11, 12, 13, 14, 1, 3, 8, 9, 10, 136, 137, 138, 139, 140, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 125, 146]', '2019-04-28 00:12:55', '超级管理员', 1),
-	(9, '菜单管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.MenuController', 'save', 'sys_menu', 157, '添加菜单：主页', '2019-04-28 00:13:59', '超级管理员', 1),
-	(10, '菜单管理', 1, '127.0.0.1', 'com.linln.admin.system.controller.MenuController', 'save', 'sys_menu', 158, '添加菜单：系统管理', '2019-04-28 00:14:39', '超级管理员', 1);
+	(1, '角色状态', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'status', NULL, NULL, '删除ID：[15]', '2019-04-28 00:08:45', '超级管理员', 1),
+	(2, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组1', '2019-04-28 00:09:06', '超级管理员', 1),
+	(3, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 3, '更新日志成功：用户组2', '2019-04-28 00:09:17', '超级管理员', 1),
+	(4, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组1', '2019-04-28 00:09:28', '超级管理员', 1),
+	(5, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：用户组', '2019-04-28 00:09:32', '超级管理员', 1),
+	(6, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 2, '更新日志成功：开发组', '2019-04-28 00:10:00', '超级管理员', 1),
+	(7, '日志管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.RoleController', 'save', 'sys_role', 3, '更新日志成功：用户组', '2019-04-28 00:11:09', '超级管理员', 1),
+	(8, '菜单状态', 1, '127.0.0.1', 'com.crmdmin.system.controller.MenuController', 'status', NULL, NULL, '删除ID：[6, 2, 7, 16, 15, 17, 18, 19, 20, 4, 5, 11, 12, 13, 14, 1, 3, 8, 9, 10, 136, 137, 138, 139, 140, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 125, 146]', '2019-04-28 00:12:55', '超级管理员', 1),
+	(9, '菜单管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.MenuController', 'save', 'sys_menu', 157, '添加菜单：主页', '2019-04-28 00:13:59', '超级管理员', 1),
+	(10, '菜单管理', 1, '127.0.0.1', 'com.crmdmin.system.controller.MenuController', 'save', 'sys_menu', 158, '添加菜单：系统管理', '2019-04-28 00:14:39', '超级管理员', 1);
 /*!40000 ALTER TABLE `sys_action_log` ENABLE KEYS */;
 
 -- 导出  表 timo.sys_dept 结构
@@ -327,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `sys_user` (
 /*!40000 ALTER TABLE `sys_user` DISABLE KEYS */;
 INSERT INTO `sys_user` (`id`, `username`, `nickname`, `password`, `salt`, `dept_id`, `picture`, `sex`, `email`, `phone`, `remark`, `create_date`, `update_date`, `status`) VALUES
 	(1, 'admin', '超级管理员', '3dd0affe1e514fa059d00bf63134fe48d45acd3f350aaed83b0b54ef05579092', '3ABR79', 2, NULL, '1', '10086@163.com', '10086', '', '2018-08-09 23:00:03', '2019-04-28 00:07:21', 1),
-	(2, 'linln', '小懒虫', 'f061ad891b99463f49e79b80fda22a2c2d320a248d485c6d8f188fb79be72a9b', '5f444i', 2, NULL, '2', '1008612@qq.com', '1008612', '', '2018-09-30 16:25:22', '2019-04-28 00:07:47', 1);
+	(2, 'crm', '小懒虫', 'f061ad891b99463f49e79b80fda22a2c2d320a248d485c6d8f188fb79be72a9b', '5f444i', 2, NULL, '2', '1008612@qq.com', '1008612', '', '2018-09-30 16:25:22', '2019-04-28 00:07:47', 1);
 /*!40000 ALTER TABLE `sys_user` ENABLE KEYS */;
 
 -- 导出  表 timo.sys_user_role 结构

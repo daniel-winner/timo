@@ -1,4 +1,4 @@
-package com.linln.component.jwt.config.properties;
+package com.crm.component.jwt.config.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

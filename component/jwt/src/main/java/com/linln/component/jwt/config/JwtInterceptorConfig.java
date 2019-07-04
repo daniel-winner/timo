@@ -1,6 +1,6 @@
-package com.linln.component.jwt.config;
+package com.crm.component.jwt.config;
 
-import com.linln.component.jwt.interceptor.AuthenticationInterceptor;
+import com.crm.component.jwt.interceptor.AuthenticationInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;

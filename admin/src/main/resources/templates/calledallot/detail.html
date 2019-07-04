@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+</head>
+<body>
+    <div class="timo-detail-page">
+        <div class="timo-detail-title">基本信息</div>
+        <table class="layui-table timo-detail-table">
+            <colgroup>
+                <col width="100px"><col>
+                <col width="100px"><col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>主键ID</th>
+                    <td th:text="${calledAllot.id}"></td>
+                    <th>号码</th>
+                    <td th:text="${calledAllot.calledNum}"></td>
+                </tr>
+                <tr>
+                    <th>业务员</th>
+                    <td th:text="${calledAllot.userID}"></td>
+                    <th>是否在紧商网注册</th>
+                    <td th:text="${calledAllot.isRegister}"></td>
+                </tr>
+                <tr>
+                    <th>在紧商网注册时间</th>
+                    <td th:text="${calledAllot.registerrTime}"></td>
+                    <th>号码访问次数</th>
+                    <td th:text="${calledAllot.callsNum}"></td>
+                </tr>
+                <tr>
+                    <th>号码分配时间</th>
+                    <td th:text="${calledAllot.allotTime}"></td>
+                    <th>号码导入时间</th>
+                    <td th:text="${calledAllot.inputTime}"></td>
+                </tr>
+                <tr>
+                    <th>备注</th>
+                    <td th:text="${calledAllot.remake}"></td>
+                    <th>导入人</th>
+                    <td th:text="${calledAllot.inputUser}"></td>
+                </tr>
+                <tr>
+                    <th>分配人</th>
+                    <td th:text="${calledAllot.allotUser}" colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script th:replace="/common/template :: script"></script>
+</body>
+</html>

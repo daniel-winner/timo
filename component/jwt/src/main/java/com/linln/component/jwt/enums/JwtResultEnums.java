@@ -1,6 +1,6 @@
-package com.linln.component.jwt.enums;
+package com.crm.component.jwt.enums;
 
-import com.linln.common.exception.interfaces.ResultInterface;
+import com.crm.common.exception.interfaces.ResultInterface;
 import lombok.Getter;
 
 /**

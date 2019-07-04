@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/devtools/devtools.iml" filepath="$PROJECT_DIR$/devtools/devtools.iml" />
       <module fileurl="file://$PROJECT_DIR$/component/excel/excel.iml" filepath="$PROJECT_DIR$/component/excel/excel.iml" />
       <module fileurl="file://$PROJECT_DIR$/component/fileUpload/fileUpload.iml" filepath="$PROJECT_DIR$/component/fileUpload/fileUpload.iml" />
-      <module fileurl="file://$PROJECT_DIR$/component/jwt/jwt.iml" filepath="$PROJECT_DIR$/component/jwt/jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/modules.iml" filepath="$PROJECT_DIR$/modules/modules.iml" />
       <module fileurl="file://$PROJECT_DIR$/component/shiro/shiro.iml" filepath="$PROJECT_DIR$/component/shiro/shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/modules/system/system.iml" filepath="$PROJECT_DIR$/modules/system/system.iml" />

@@ -13,7 +13,6 @@
         <module name="excel" />
         <module name="fileUpload" />
         <module name="system" />
-        <module name="jwt" />
         <module name="shiro" />
         <module name="admin" />
       </profile>
@@ -32,6 +31,7 @@
       <module name="system" target="1.11" />
       <module name="thymeleaf" target="1.11" />
       <module name="timo" target="1.11" />
+      <module name="user_role" target="1.11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -46,6 +46,7 @@
       <module name="shiro" options="-parameters" />
       <module name="system" options="-parameters" />
       <module name="thymeleaf" options="-parameters" />
+      <module name="user_role" options="-parameters" />
     </option>
   </component>
 </project>
