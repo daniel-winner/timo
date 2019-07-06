@@ -3,11 +3,13 @@ package com.crm.modules.system.repository;
 import com.crm.modules.system.domain.Dept;
 import com.crm.modules.system.domain.User;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 public interface UserRepository extends BaseRepository<User, Long>, JpaSpecificationExecutor<User> {
@@ -37,4 +39,13 @@ public interface UserRepository extends BaseRepository<User, Long>, JpaSpecifica
      * @param ids     ID列表
      */
     public Integer deleteByIdIn(List<Long> ids);
+
+    /**
+     * 获取指定角色的所有对象
+     * @return
+     */
+    @Query(value = "SELECT * from sys_user where status =1 and  id in (SELECT user_id from sys_user_role where role_id = :roleId)",nativeQuery = true)
+    public List<User> getAllSales(@Param("roleId") Integer roleId);
+
+
 }

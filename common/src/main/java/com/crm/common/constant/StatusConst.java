@@ -2,7 +2,7 @@ package com.crm.common.constant;
 
 /**
  * 数据状态常量
- * @author 小懒虫
+ * @author dxf
  * @date 2019/2/22
  */
 public class StatusConst {

@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 
 /**
  * jwt权限拦截器
- * @author 小懒虫
+ * @author dxf
  * @date 2019/4/12
  */
 @Component

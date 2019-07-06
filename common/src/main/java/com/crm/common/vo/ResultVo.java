@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * 响应数据(结果)最外层对象
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/15
  */
 @Data

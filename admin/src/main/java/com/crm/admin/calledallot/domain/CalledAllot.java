@@ -33,8 +33,13 @@ public class CalledAllot implements Serializable {
     private Long id;
     // 号码
     private String calledNum;
+    //公司名称
+    private String companyName;
+    //职位
+    private String position;
     // 业务员
     private Long userID;
+
     // 是否在紧商网注册
     private Byte isRegister;
     // 在紧商网注册时间

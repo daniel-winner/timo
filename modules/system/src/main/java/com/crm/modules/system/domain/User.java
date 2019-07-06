@@ -20,8 +20,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author 小懒虫
- * @date 2018/8/14
+ * @author dxf
+ * @date 2019-6-25
  */
 @Entity
 @Table(name="sys_user")
@@ -71,4 +71,21 @@ public class User implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     @JsonIgnore
     private Set<Role> roles = new HashSet<>(0);
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", picture='" + picture + '\'' +
+                ", sex='" + sex + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", createDate=" + createDate +
+                ", updateDate=" + updateDate +
+                ", remark='" + remark + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

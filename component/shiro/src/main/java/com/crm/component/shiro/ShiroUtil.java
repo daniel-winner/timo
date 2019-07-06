@@ -13,8 +13,8 @@ import java.util.Set;
 
 /**
  * Shiro工具类
- * @author 小懒虫
- * @date 2018/8/14
+ * @author dxf
+ * @date 2019-7-6
  */
 public class ShiroUtil {
 

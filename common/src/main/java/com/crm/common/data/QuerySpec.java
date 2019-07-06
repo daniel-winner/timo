@@ -17,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/12/7
  */
 public class QuerySpec {

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Jwt权限注解AOP
- * @author 小懒虫
+ * @author dxf
  * @date 2019/4/13
  */
 @Aspect

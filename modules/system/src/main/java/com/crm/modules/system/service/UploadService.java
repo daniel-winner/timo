@@ -3,7 +3,7 @@ package com.crm.modules.system.service;
 import com.crm.modules.system.domain.Upload;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/11/02
  */
 public interface UploadService {

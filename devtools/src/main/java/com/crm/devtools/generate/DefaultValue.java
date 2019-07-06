@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/21
  */
 public class DefaultValue {
@@ -24,7 +24,7 @@ public class DefaultValue {
         Basic basic = new Basic();
         basic.setProjectPath(ToolUtil.getProjectPath() + "/");
         basic.setPackagePath("com.crm");
-        basic.setAuthor("小懒虫");
+        basic.setAuthor("dxf");
         basic.setGenModule("order");
         basic.setTablePrefix("or_");
         return basic;

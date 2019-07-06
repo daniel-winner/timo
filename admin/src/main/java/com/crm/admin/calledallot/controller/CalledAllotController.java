@@ -3,11 +3,19 @@ package com.crm.admin.calledallot.controller;
 import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.admin.calledallot.service.CalledAllotService;
 import com.crm.common.enums.StatusEnum;
-import com.crm.common.utils.EntityBeanUtil;
 import com.crm.common.utils.ResultVoUtil;
 import com.crm.common.utils.StatusUtil;
 import com.crm.common.vo.ResultVo;
+import com.crm.component.shiro.ShiroUtil;
+import com.crm.modules.system.domain.User;
+import com.crm.modules.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,11 +28,10 @@ import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,11 +43,11 @@ import java.util.List;
 @Slf4j
 public class CalledAllotController {
 
-    @Value("project.upload.file-path")
-    private String uploadPath;
-
     @Autowired
     private CalledAllotService calledAllotService;
+
+    @Autowired
+    private UserService userService;
 
     /**
      * 列表页面
@@ -49,6 +56,8 @@ public class CalledAllotController {
     @RequiresPermissions("calledallot:calledAllot:index")
     public String index(Model model, CalledAllot calledAllot) {
 
+        List<User> allSales = userService.getAllSales(17);
+        model.addAttribute("users",allSales);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
 
@@ -71,22 +80,58 @@ public class CalledAllotController {
     public String toAdd() {
         return "/calledallot/add";
     }
+    /**
+     * 跳转到分配页面
+     */
+    @GetMapping("/allot")
+    @RequiresPermissions("calledallot:calledAllot:allot")
+    public String toAllot( Model model, @RequestParam(value = "ids", required = false) List<Integer> ids) {
+        List<User> allEmplooyee = userService.getAllSales(17);
+        model.addAttribute("allEmplooyee",allEmplooyee);
+        model.addAttribute("ids",ids);
+        return "/calledallot/allot";
+    }
 
     /**
-     * 跳转到添加页面
+     * 导入文件
      */
-    @GetMapping("/upload")
+    @PostMapping("/upload")
     @RequiresPermissions("calledallot:calledAllot:add")
-    public Object uploadExcel(MultipartFile file) {
+    @ResponseBody
+    public Object uploadExcel(MultipartFile file,HttpServletRequest request) {
         try {
-            String filename = file.getOriginalFilename();
-            InputStream inputStream = file.getInputStream();
+            if(!file.isEmpty()) {
+                String filename = file.getOriginalFilename();
+                String substring = filename.substring(filename.indexOf(".")+1, filename.length());
+                log.info("filename:{},substring:{}",filename,substring);
+                if(!"xls".equalsIgnoreCase(substring)&&!"xlsx".equalsIgnoreCase(substring)){
+                    return ResultVoUtil.error(-1,"上传文件类型不符，请上传正确的excel文件");
+                }
+                String ss = "D:/IDEA-workspace/Timo/admin/src/main/resources/upload/"+new Date().getTime()+"_" +filename;
+                log.info(ss);
+                file.transferTo(new File(ss));
+                InputStream inputStream = file.getInputStream();
+                Workbook workbook = null;
+                if("xlsx".equalsIgnoreCase(substring)){
+                    workbook = new HSSFWorkbook(inputStream);
+                }else{
+                    workbook =  new XSSFWorkbook(inputStream);
+                }
+                Sheet sheet = workbook.getSheetAt(0);
+                Row row = sheet.getRow(0);
+                Cell cell = row.getCell(0);
+                if (cell!=null){
+                    String cellValue = cell.getStringCellValue();
+                }
 
+            }else {
+
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return "/calledallot/add";
+        return null;
     }
 
     /**
@@ -127,7 +172,11 @@ public class CalledAllotController {
     @GetMapping("/edit/{id}")
     @RequiresPermissions("calledallot:calledAllot:edit")
     public String toEdit(@PathVariable("id") CalledAllot calledAllot, Model model) {
-        model.addAttribute("calledAllot", calledAllot);
+        List<User> allSales = userService.getAllSales(17);
+        CalledAllot user = calledAllotService.getById(calledAllot.getId());
+
+        model.addAttribute("calledAllot", user);
+        model.addAttribute("users",allSales);
         return "/calledallot/add";
     }
 
@@ -148,9 +197,7 @@ public class CalledAllotController {
                 calledAllotService.save(calledAllot);
             }
         }
-
         // 保存数据
-
         return ResultVoUtil.SAVE_SUCCESS;
     }
 
@@ -163,14 +210,21 @@ public class CalledAllotController {
     @RequiresPermissions({"calledallot:calledAllot:edit"})
     @ResponseBody
     public ResultVo edit(CalledAllot calledAllot) {
+        User user = ShiroUtil.getSubject();
+        log.info(user==null?"获取登录用户信息为空":user.toString());
         // 复制保留无需修改的数据
         if (calledAllot.getId() != null) {
             CalledAllot beCalledAllot = calledAllotService.getById(calledAllot.getId());
-            EntityBeanUtil.copyProperties(beCalledAllot, calledAllot);
+            log.info(beCalledAllot.toString());
+            beCalledAllot.setAllotUser(calledAllot.getAllotUser());
+            beCalledAllot.setUserID(calledAllot.getUserID());
+            beCalledAllot.setAllotTime(new Date());
+            beCalledAllot.setIsRegister(calledAllot.getIsRegister());
+            beCalledAllot.setRemake(calledAllot.getRemake());
+            beCalledAllot.setAllotUser(user==null?null:user.getId());
+            // 保存数据
+            calledAllotService.save(beCalledAllot);
         }
-
-        // 保存数据
-        calledAllotService.save(calledAllot);
         return ResultVoUtil.SAVE_SUCCESS;
     }
 
@@ -184,6 +238,7 @@ public class CalledAllotController {
         model.addAttribute("calledAllot", calledAllot);
         return "/calledallot/detail";
     }
+
 
     /**
      * 设置一条或者多条数据的状态

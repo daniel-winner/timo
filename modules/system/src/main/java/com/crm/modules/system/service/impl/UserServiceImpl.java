@@ -20,17 +20,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 @Service
 public class UserServiceImpl implements UserService {
+
 
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private DeptService deptService;
+
+    /**
+     * 根据用户名查询用户数据
+     * @return 用户数据
+     */
+    @Override
+    public List<User>  getAllSales(Integer id) {
+        return userRepository.getAllSales(id);
+    }
 
     /**
      * 根据用户名查询用户数据
@@ -145,4 +155,6 @@ public class UserServiceImpl implements UserService {
         }
         return userRepository.updateStatus(statusEnum.getCode(), ids) > 0;
     }
+
+
 }

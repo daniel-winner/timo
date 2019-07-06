@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:mo="https://gitee.com/aun/Timo">
+<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+</head>
+<body class="timo-layout-page">
+    <div class="layui-card">
+        <div class="layui-card-header timo-card-header">
+            <span><i class="fa fa-bars"></i> 号码分配管理</span>
+            <i class="layui-icon layui-icon-refresh refresh-btn"></i>
+        </div>
+        <div class="layui-card-body">
+            <div class="layui-row timo-card-screen">
+                <div class="pull-left layui-form-pane timo-search-box">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">号码</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="calledNum"  placeholder="请输入号码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">是否在紧商网注册</label>
+                        <div class="layui-input-block timo-search-status" >
+                            <select class="timo-search-select" style="width: 100px" name="status" mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button class="layui-btn timo-search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="timo-table-wrap">
+                <table class="layui-table timo-table">
+                    <thead>
+                    <tr>
+                        <th class="timo-table-checkbox">
+                            <label class="timo-checkbox"><input type="checkbox">
+                                <i class="layui-icon layui-icon-ok"></i></label>
+                        </th>
+                        <th>号码</th>
+                        <th>业务员</th>
+                        <th>是否在紧商网注册</th>
+                        <th>在紧商网注册时间</th>
+                        <th>号码访问次数</th>
+                        <th>号码分配时间</th>
+                        <th>号码导入时间</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item:${list}">
+                        <td><label class="timo-checkbox"><input type="checkbox" th:value="${item.id}">
+                            <i class="layui-icon layui-icon-ok"></i></label></td>
+                        <td th:text="${item.calledNum}">号码</td>
+                        <td th:each="user:${users}" th:if="${user.id eq item.userID}" th:text="${user.nickname}">业务员</td>
+                        <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>
+                        <td th:text="${#dates.format(item.registerrTime,'yyyy-MM-dd HH:mm:ss')}">在紧商网注册时间</td>
+                        <td th:text="${item.callsNum}">号码访问次数</td>
+                        <td th:text="${#dates.format(item.allotTime,'yyyy-MM-dd HH:mm:ss')}">号码分配时间</td>
+                        <td th:text="${#dates.format(item.inputTime,'yyyy-MM-dd HH:mm:ss')}">号码导入时间</td>
+                        <td th:text="${item.remake}">备注</td>
+                        <td>
+                            <a class="open-popup" data-title="号码分配" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="详细信息" th:attr="data-url=@{'/calledallot/calledAllot/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:replace="/common/fragment :: page"></div>
+        </div>
+    </div>
+<script th:replace="/common/template :: script"></script>
+<script th:src="@{/crmjs/cellnumlib.js}" src="../static/crmjs/cellnumlib.js"></script>
+</body>
+</html>

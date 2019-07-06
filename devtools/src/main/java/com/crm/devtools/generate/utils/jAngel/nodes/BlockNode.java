@@ -4,7 +4,7 @@ import com.crm.devtools.generate.utils.jAngel.JAngel;
 
 /**
  * 块节点
- * @author 小懒虫
+ * @author dxf
  * @date 2019/4/2
  */
 public class BlockNode extends Node{

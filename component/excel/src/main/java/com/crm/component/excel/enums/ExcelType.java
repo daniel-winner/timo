@@ -2,7 +2,7 @@ package com.crm.component.excel.enums;
 
 /**
  * Excel操作类型
- * @author 小懒虫
+ * @author dxf
  * @date 2018/12/18
  */
 public enum ExcelType {

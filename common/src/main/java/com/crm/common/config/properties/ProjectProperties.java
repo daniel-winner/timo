@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 项目配置项
- * @author 小懒虫
+ * @author dxf
  * @date 2018/11/6
  */
 @Data

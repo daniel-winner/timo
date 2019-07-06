@@ -3,7 +3,7 @@ package com.crm.modules.system.repository;
 import com.crm.modules.system.domain.Dict;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 public interface DictRepository extends BaseRepository<Dict, Long> {

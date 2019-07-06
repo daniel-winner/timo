@@ -4,7 +4,7 @@ import lombok.Getter;
 
 /**
  * 数据库字段状态枚举
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 @Getter

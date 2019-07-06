@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * jwt权限配置拦截器
- * @author 小懒虫
+ * @author dxf
  * @date 2019/4/12
  */
 @Configuration

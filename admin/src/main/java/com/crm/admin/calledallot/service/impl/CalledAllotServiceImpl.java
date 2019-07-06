@@ -67,4 +67,9 @@ public class CalledAllotServiceImpl implements CalledAllotService {
     public Boolean updateStatus(StatusEnum statusEnum, List<Long> idList) {
         return calledAllotRepository.updateStatus(statusEnum.getCode(), idList) > 0;
     }
+
+    @Override
+    public int updateCallNum(String cellednum) {
+        return calledAllotRepository.updateCallNumAddOne(cellednum);
+    }
 }

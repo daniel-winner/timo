@@ -12,29 +12,28 @@
         <div class="layui-card-body">
             <div class="layui-row timo-card-screen">
                 <div class="pull-left layui-form-pane timo-search-box">
-<!--                    <div class="layui-inline">-->
-<!--                        <label class="layui-form-label">状态</label>-->
-<!--                        <div class="layui-input-block timo-search-status">-->
-<!--                            <select class="timo-search-select" name="status" mo:dict="SEARCH_STATUS" mo-selected="${param.status}"></select>-->
-<!--                        </div>-->
-<!--                    </div>-->
                     <div class="layui-inline">
                         <label class="layui-form-label">号码</label>
                         <div class="layui-input-block">
-                            <input type="text" name="calledNum" th:value="${param.calledNum}" placeholder="请输入号码" autocomplete="off" class="layui-input">
+                            <input type="text" name="calledNum"  placeholder="请输入号码" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">业务员</label>
                         <div class="layui-input-block">
-                            <input type="text" name="userID" th:value="${param.userID}" placeholder="请输入业务员" autocomplete="off" class="layui-input">
+<!--                            <input type="text" name="userID" style="width: 100px" th:value="${param.userID}" placeholder="请输入业务员" autocomplete="off" class="layui-input">-->
+                            <select name="userID" lay-search="" class="timo-search-select layui-input-block">
+                                <option value="">请输入业务员</option>
+                                <option th:each="user : ${users}"
+                                        th:value="${user.id}" th:text="${user.nickname}">
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">是否在紧商网注册</label>
                         <div class="layui-input-block timo-search-status" >
-<!--                            <input type="text" name="isRegister" th:value="${param.isRegister}" placeholder="请输入是否在紧商网注册" autocomplete="off" class="layui-input">-->
-                            <select class="timo-search-select" name="status" mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
+                            <select class="timo-search-select" style="width: 100px" name="status" mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
                         </div>
                     </div>
                     <div class="layui-inline">
@@ -44,11 +43,15 @@
                     </div>
                 </div>
                 <div class="pull-right screen-btn-group">
-                    <button class="layui-btn" ype="button" id="upload" data-title="名单导入" th:attr="data-url=@{/calledallot/calledAllot/add}">
+                    <button class="layui-btn open-popup-param" id="allot" data-title="名单分配" th:attr="data-url=@{/calledallot/calledAllot/allot}"  data-size="auto">
+                        <i class="fa fa-plus"></i> 名单分配</button>
+<!--                    <button class="layui-btn open-popup-param" data-title="修改密码" th:attr="data-url=@{/system/user/pwd}"  data-size="456,242">-->
+
+                    <button class="layui-btn" id="upload" data-title="名单导入" th:attr="data-url=@{/calledallot/calledAllot/add}">
                     <i class="fa fa-plus"></i> 名单导入</button>
 
-                    <button class="layui-btn " onclick="downloadtemplate()" data-title="下载模板" th:attr="data-url=@{/calledallot/calledAllot/downloadtemplate}" data-size="auto">
-                    <i class="fa fa-plus"></i> 下载模板</button>
+                    <button class="layui-btn " onclick="downloadtemplate()" data-title="下载模板" th:attr="data-url=@{/calledallot/calledAllot/downloadtemplate}" >
+                    <i class="fa fa-download"></i> 下载模板</button>
                 </div>
             </div>
             <div class="timo-table-wrap">
@@ -75,17 +78,16 @@
                         <td><label class="timo-checkbox"><input type="checkbox" th:value="${item.id}">
                             <i class="layui-icon layui-icon-ok"></i></label></td>
                         <td th:text="${item.calledNum}">号码</td>
-                        <td th:text="${item.userID}">业务员</td>
-                        <td th:text="${item.isRegister}">是否在紧商网注册</td>
-                        <td th:text="${item.registerrTime}">在紧商网注册时间</td>
+                        <td th:each="user:${users}" th:if="${user.id eq item.userID}" th:text="${user.nickname}">业务员</td>
+                        <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>
+                        <td th:text="${#dates.format(item.registerrTime,'yyyy-MM-dd HH:mm:ss')}">在紧商网注册时间</td>
                         <td th:text="${item.callsNum}">号码访问次数</td>
-                        <td th:text="${item.allotTime}">号码分配时间</td>
-                        <td th:text="${item.inputTime}">号码导入时间</td>
+                        <td th:text="${#dates.format(item.allotTime,'yyyy-MM-dd HH:mm:ss')}">号码分配时间</td>
+                        <td th:text="${#dates.format(item.inputTime,'yyyy-MM-dd HH:mm:ss')}">号码导入时间</td>
                         <td th:text="${item.remake}">备注</td>
                         <td>
-                            <a class="open-popup" data-title="编辑号码分配" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="号码分配" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
                             <a class="open-popup" data-title="详细信息" th:attr="data-url=@{'/calledallot/calledAllot/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
-<!--                            <a class="ajax-get" data-msg="您是否确认删除" th:href="@{/calledallot/calledAllot/status/delete(ids=${item.id})}">删除</a>-->
                         </td>
                     </tr>
                     </tbody>

@@ -7,7 +7,7 @@ import com.crm.common.exception.ResultException;
 
 /**
  * 数据状态工具
- * @author 小懒虫
+ * @author dxf
  * @date 2019/2/19
  */
 public class StatusUtil {

@@ -2,7 +2,7 @@ package com.crm.common.constant;
 
 /**
  * 超级管理员常量
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 public class AdminConst {

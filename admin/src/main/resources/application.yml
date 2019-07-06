@@ -34,6 +34,7 @@ spring:
 
   ## thymeleaf模板设置
   thymeleaf:
+    cache=false: false
     prefix: classpath:/templates
     suffix: .html
     mode: HTML

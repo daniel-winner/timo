@@ -44,4 +44,10 @@ public interface CalledAllotService {
      */
     @Transactional
     Boolean updateStatus(StatusEnum statusEnum, List<Long> idList);
+
+
+    /**
+     * 更新被访问次数
+     */
+    int updateCallNum(String cellednum);
 }

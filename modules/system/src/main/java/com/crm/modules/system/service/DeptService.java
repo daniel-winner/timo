@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/12/02
  */
 public interface DeptService {

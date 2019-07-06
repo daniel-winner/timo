@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:mo="https://gitee.com/aun/Timo">
 <head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
 </head>
 <body>
     <div class="layui-form timo-compile">
-    <form th:action="@{/calledallot/calledAllot/add}">
+    <form th:action="@{/calledallot/calledAllot/edit}">
         <input type="hidden" name="id" th:if="${calledAllot}" th:value="${calledAllot.id}">
         <div class="layui-form-item">
             <label class="layui-form-label">号码</label>
             <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="calledNum" placeholder="请输入号码" th:value="${calledAllot?.calledNum}">
+                <input class="layui-input" disabled type="text" name="calledNum" placeholder="请输入号码" th:value="${calledAllot?.calledNum}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">业务员</label>
             <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="userID" placeholder="请输入业务员" th:value="${calledAllot?.userID}">
+                <select name="userID" lay-search="" class="form-control input1">
+                    <option value="">请输入业务员</option>
+                    <option th:selected="${user.id  eq calledAllot?.userID}"
+                            th:each="user : ${users}"
+                    th:value="${user.id}" th:text="${user.nickname}">
+                    </option>
+                </select>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">是否在紧商网注册</label>
             <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="isRegister" placeholder="请输入是否在紧商网注册" th:value="${calledAllot?.isRegister}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">在紧商网注册时间</label>
-            <div class="layui-input-inline">
-                <input class="layui-input " id="dateTime1" type="text" name="registerrTime" placeholder="请输入在紧商网注册时间" th:value="${calledAllot?.registerrTime}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">号码访问次数</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="callsNum" placeholder="请输入号码访问次数" th:value="${calledAllot?.callsNum}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">号码分配时间</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" id="dateTime2" type="text" name="allotTime" placeholder="请输入号码分配时间" th:value="${calledAllot?.allotTime}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">号码导入时间</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" id="dateTime3" type="text" name="inputTime" placeholder="请输入号码导入时间" th:value="${calledAllot?.inputTime}">
+<!--                <input class="layui-input" type="text" name="isRegister" placeholder="请输入是否在紧商网注册"  th:value="${calledAllot?.isRegister}">-->
+                <select class="timo-search-select" style="width: 100px" name="isRegister"  mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
             </div>
         </div>
         <div class="layui-form-item">
@@ -54,18 +38,7 @@
                 <input class="layui-input" type="text" name="remake" placeholder="请输入备注" th:value="${calledAllot?.remake}">
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">导入人</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="inputUser" placeholder="请输入导入人" th:value="${calledAllot?.inputUser}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">分配人</label>
-            <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="allotUser" placeholder="请输入分配人" th:value="${calledAllot?.allotUser}">
-            </div>
-        </div>
+
         <div class="layui-form-item timo-finally">
             <button class="layui-btn ajax-submit"><i class="fa fa-check-circle"></i> 保存</button>
             <button class="layui-btn btn-secondary close-popup"><i class="fa fa-times-circle"></i> 关闭</button>

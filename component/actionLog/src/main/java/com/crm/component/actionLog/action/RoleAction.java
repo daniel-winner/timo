@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 /**
  * 角色日志行为
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/14
  */
 public class RoleAction extends ActionMap {

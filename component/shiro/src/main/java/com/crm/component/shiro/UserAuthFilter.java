@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 处理session超时问题拦截器
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 public class UserAuthFilter extends AccessControlFilter {

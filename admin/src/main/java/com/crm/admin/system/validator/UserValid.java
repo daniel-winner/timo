@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 @Data

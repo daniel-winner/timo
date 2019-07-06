@@ -3,7 +3,7 @@ package com.crm.devtools.generate.domain;
 import lombok.Data;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/21
  */
 @Data

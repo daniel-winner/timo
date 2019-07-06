@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * 密码加密测试类，可用于重置密码
- * @author 小懒虫
+ * @author dxf
  * @date 2019/4/27
  */
 public class EncryptUtilTest {

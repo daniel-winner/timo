@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/8/14
  */
 public interface UserService {
@@ -57,4 +57,12 @@ public interface UserService {
      */
     @Transactional
     Boolean updateStatus(StatusEnum statusEnum, List<Long> idList);
+
+    /**
+     * 获取指定角色的所有用户
+     * @param id
+     * @return
+     */
+    List<User> getAllSales( Integer id);
+
 }

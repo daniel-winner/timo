@@ -7,11 +7,15 @@ layui.use(['element', 'jquery', 'table', 'upload', 'laydate'], function () {
     laydate.render({elem: '#dateTime3',type: 'datetime' });
 
     var uploadInst = upload.render({
-        elem: '#upload' //绑定元素
+        exts:'xls|xlsx'
+        ,accept: 'file'
+        ,elem: '#upload' //绑定元素
         ,url: '/calledallot/calledAllot/upload' //上传接口
         ,done: function(res){
-            layer.msg("上传文件中");
             console.info(res);
+            if(res.code==-1){
+                layer.msg(res.msg);
+            }
         }
         ,error: function(){
             layer.msg("文件上传失败");

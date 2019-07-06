@@ -327,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `sys_user` (
 /*!40000 ALTER TABLE `sys_user` DISABLE KEYS */;
 INSERT INTO `sys_user` (`id`, `username`, `nickname`, `password`, `salt`, `dept_id`, `picture`, `sex`, `email`, `phone`, `remark`, `create_date`, `update_date`, `status`) VALUES
 	(1, 'admin', '超级管理员', '3dd0affe1e514fa059d00bf63134fe48d45acd3f350aaed83b0b54ef05579092', '3ABR79', 2, NULL, '1', '10086@163.com', '10086', '', '2018-08-09 23:00:03', '2019-04-28 00:07:21', 1),
-	(2, 'crm', '小懒虫', 'f061ad891b99463f49e79b80fda22a2c2d320a248d485c6d8f188fb79be72a9b', '5f444i', 2, NULL, '2', '1008612@qq.com', '1008612', '', '2018-09-30 16:25:22', '2019-04-28 00:07:47', 1);
+	(2, 'crm', 'dxf', 'f061ad891b99463f49e79b80fda22a2c2d320a248d485c6d8f188fb79be72a9b', '5f444i', 2, NULL, '2', '1008612@qq.com', '1008612', '', '2018-09-30 16:25:22', '2019-04-28 00:07:47', 1);
 /*!40000 ALTER TABLE `sys_user` ENABLE KEYS */;
 
 -- 导出  表 timo.sys_user_role 结构

@@ -3,7 +3,7 @@ package com.crm.devtools.generate.enums;
 import lombok.Getter;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/21
  */
 @Getter

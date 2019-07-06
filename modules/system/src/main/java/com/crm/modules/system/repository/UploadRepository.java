@@ -4,7 +4,7 @@ import com.crm.modules.system.domain.Upload;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/11/02
  */
 public interface UploadRepository extends JpaRepository<Upload, Long> {

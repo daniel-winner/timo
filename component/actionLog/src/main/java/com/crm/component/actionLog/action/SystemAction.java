@@ -6,7 +6,7 @@ import com.crm.component.actionLog.action.model.SystemMethod;
 import com.crm.modules.system.domain.ActionLog;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/19
  */
 public class SystemAction extends ActionMap {

@@ -6,7 +6,7 @@ import com.crm.common.data.URL;
 
 /**
  * 响应数据(结果)最外层对象工具
- * @author 小懒虫
+ * @author dxf
  * @date 2018/10/15
  */
 public class ResultVoUtil {

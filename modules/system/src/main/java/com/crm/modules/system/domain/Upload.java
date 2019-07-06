@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author 小懒虫
+ * @author dxf
  * @date 2018/11/02
  */
 @Entity
