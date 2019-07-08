@@ -34,11 +34,11 @@ public class UserServiceImpl implements UserService {
     private DeptService deptService;
 
     /**
-     * 根据用户名查询用户数据
+     * 根据查询某部门下的所有用户
      * @return 用户数据
      */
     @Override
-    public List<User>  getAllSales(Integer id) {
+    public List<User>  getAllSales(String id) {
         return userRepository.getAllSales(id);
     }
 

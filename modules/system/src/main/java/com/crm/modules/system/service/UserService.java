@@ -63,6 +63,6 @@ public interface UserService {
      * @param id
      * @return
      */
-    List<User> getAllSales( Integer id);
+    List<User> getAllSales( String id);
 
 }

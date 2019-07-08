@@ -5,24 +5,12 @@
 </head>
 <body>
     <div class="layui-form timo-compile">
-    <form th:action="@{/calledallot/calledAllot/edit}">
+    <form th:action="@{/customer/edit}">
         <input type="hidden" name="id" th:if="${calledAllot}" th:value="${calledAllot.id}">
         <div class="layui-form-item">
             <label class="layui-form-label">号码</label>
             <div class="layui-input-inline">
                 <input class="layui-input" disabled type="text" name="calledNum" placeholder="请输入号码" th:value="${calledAllot?.calledNum}">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">业务员</label>
-            <div class="layui-input-inline">
-                <select name="username" lay-search="" class="form-control input1">
-                    <option value="">请输入业务员</option>
-                    <option th:selected="${user.username  eq calledAllot?.username}"
-                            th:each="user : ${users}"
-                    th:value="${user.username}" th:text="${user.nickname}">
-                    </option>
-                </select>
             </div>
         </div>
         <div class="layui-form-item">

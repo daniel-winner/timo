@@ -44,8 +44,8 @@ public interface UserRepository extends BaseRepository<User, Long>, JpaSpecifica
      * 获取指定角色的所有对象
      * @return
      */
-    @Query(value = "SELECT * from sys_user where status =1 and  id in (SELECT user_id from sys_user_role where role_id = :roleId)",nativeQuery = true)
-    public List<User> getAllSales(@Param("roleId") Integer roleId);
+    @Query(value = "SELECT * from sys_user where status =1 and dept_id = :deptId",nativeQuery = true)
+    public List<User> getAllSales(@Param("deptId") String deptId);
 
 
 }

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:mo="https://gitee.com/aun/Timo">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
 </head>
 <body>
     <div class="layui-form timo-compile">
     <form th:action="@{/calledallot/calledAllot/allot}">
+        <input th:each="id:${ids}" type="hidden" name="ids" th:value="${id}"/>
         <div class="layui-form-item">
             <label class="layui-form-label">业务员</label>
             <div class="layui-input-inline">
-                <select name="userID" lay-search="" class="form-control input1">
+                <select name="username" lay-search="" class="form-control input1">
                     <option value="">请输入业务员</option>
                     <option th:each="user : ${allEmplooyee}"
-                    th:value="${user.id}" th:text="${user.nickname}">
+                    th:value="${user.username}" th:text="${user.nickname}">
                     </option>
                 </select>
             </div>
         </div>
 
         <div class="layui-form-item timo-finally">
-            <button class="layui-btn ajax-submit"><i class="fa fa-check-circle"></i> 保存</button>
+            <button class="layui-btn ajax-submit close-popup" ><i class="fa fa-check-circle"></i> 保存</button>
             <button class="layui-btn btn-secondary close-popup"><i class="fa fa-times-circle"></i> 关闭</button>
         </div>
     </form>
 </div>
 <script th:replace="/common/template :: script"></script>
-<script th:src="@{/crmjs/cellnumlib.js}" src="../static/crmjs/cellnumlib.js"></script>
+<!--<script th:src="@{/crmjs/cellnumlib.js}" src="../static/crmjs/cellnumlib.js"></script>-->
 </body>
 </html>

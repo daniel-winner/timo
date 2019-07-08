@@ -69,7 +69,7 @@ public class CalledAllotServiceImpl implements CalledAllotService {
     }
 
     @Override
-    public int updateCallNum(String cellednum) {
-        return calledAllotRepository.updateCallNumAddOne(cellednum);
+    public void updateCallNumAddOne(String cellednum) {
+        calledAllotRepository.updateCallNumAddOne(cellednum);
     }
 }

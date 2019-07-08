@@ -41,7 +41,7 @@
                                 <i class="layui-icon layui-icon-ok"></i></label>
                         </th>
                         <th>号码</th>
-                        <th>业务员</th>
+                        <th>客户名称</th>
                         <th>是否在紧商网注册</th>
                         <th>在紧商网注册时间</th>
                         <th>号码访问次数</th>
@@ -56,7 +56,7 @@
                         <td><label class="timo-checkbox"><input type="checkbox" th:value="${item.id}">
                             <i class="layui-icon layui-icon-ok"></i></label></td>
                         <td th:text="${item.calledNum}">号码</td>
-                        <td th:each="user:${users}" th:if="${user.id eq item.userID}" th:text="${user.nickname}">业务员</td>
+                        <td th:text="${item.customerName}">客户名称</td>
                         <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>
                         <td th:text="${#dates.format(item.registerrTime,'yyyy-MM-dd HH:mm:ss')}">在紧商网注册时间</td>
                         <td th:text="${item.callsNum}">号码访问次数</td>
@@ -64,8 +64,9 @@
                         <td th:text="${#dates.format(item.inputTime,'yyyy-MM-dd HH:mm:ss')}">号码导入时间</td>
                         <td th:text="${item.remake}">备注</td>
                         <td>
-                            <a class="open-popup" data-title="号码分配" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
-                            <a class="open-popup" data-title="详细信息" th:attr="data-url=@{'/calledallot/calledAllot/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
+                            <a class="open-popup" data-title="编辑" th:attr="data-url=@{'/customer/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="回访记录" th:attr="data-url=@{'/customer/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
+                            <a class="open-popup" data-title="添加回访记录" th:attr="data-url=@{'/record/add_record/'+${item.id}}" data-size="auto">添加回访记录</a>
                         </td>
                     </tr>
                     </tbody>

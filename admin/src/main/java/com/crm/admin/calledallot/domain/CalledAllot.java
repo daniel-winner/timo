@@ -33,12 +33,14 @@ public class CalledAllot implements Serializable {
     private Long id;
     // 号码
     private String calledNum;
+    // 客户名称
+    private String customerName;
     //公司名称
     private String companyName;
     //职位
     private String position;
     // 业务员
-    private Long userID;
+    private String username;
 
     // 是否在紧商网注册
     private Byte isRegister;
@@ -63,4 +65,26 @@ public class CalledAllot implements Serializable {
     private Long allotUser;
     private Byte status;
     private Date createDate;
+
+    @Override
+    public String toString() {
+        return "CalledAllot{" +
+                "id=" + id +
+                ", calledNum='" + calledNum + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", position='" + position + '\'' +
+                ", username='" + username + '\'' +
+                ", isRegister=" + isRegister +
+                ", registerrTime=" + registerrTime +
+                ", callsNum=" + callsNum +
+                ", allotTime=" + allotTime +
+                ", inputTime=" + inputTime +
+                ", remake='" + remake + '\'' +
+                ", inputUser=" + inputUser +
+                ", allotUser=" + allotUser +
+                ", status=" + status +
+                ", createDate=" + createDate +
+                '}';
+    }
 }

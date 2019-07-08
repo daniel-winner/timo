@@ -1,6 +1,7 @@
 package com.crm.admin.calledallot.controller;
 
 import com.crm.admin.calledallot.domain.CalledAllot;
+import com.crm.admin.calledallot.repository.CalledAllotRepository;
 import com.crm.admin.calledallot.service.CalledAllotService;
 import com.crm.common.enums.StatusEnum;
 import com.crm.common.utils.ResultVoUtil;
@@ -8,6 +9,7 @@ import com.crm.common.utils.StatusUtil;
 import com.crm.common.vo.ResultVo;
 import com.crm.component.shiro.ShiroUtil;
 import com.crm.modules.system.domain.User;
+import com.crm.modules.system.repository.UserRepository;
 import com.crm.modules.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -18,15 +20,16 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -45,9 +48,12 @@ public class CalledAllotController {
 
     @Autowired
     private CalledAllotService calledAllotService;
-
+    @Autowired
+    private CalledAllotRepository calledAllotRepository;
     @Autowired
     private UserService userService;
+    @Autowired
+    private UserRepository userRepository;
 
     /**
      * 列表页面
@@ -56,7 +62,8 @@ public class CalledAllotController {
     @RequiresPermissions("calledallot:calledAllot:index")
     public String index(Model model, CalledAllot calledAllot) {
 
-        List<User> allSales = userService.getAllSales(17);
+        List<User> allSales = userService.getAllSales("6");
+//        List<User> allSales = userRepository.findAll();
         model.addAttribute("users",allSales);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
@@ -64,10 +71,21 @@ public class CalledAllotController {
         // 获取数据列表
         Example<CalledAllot> example = Example.of(calledAllot, matcher);
         Page<CalledAllot> list = calledAllotService.getPageList(example);
-
-
+        List<CalledAllot> content = list.getContent();
+        for (CalledAllot ca:content ) {
+            if(StringUtils.isEmpty(ca.getUsername())){
+                ca.setUsername(" ");
+            }else {
+                for (User user:allSales ) {
+                    if (user.getUsername().equals(ca.getUsername())){
+                        ca.setUsername(user.getNickname());
+                        break;
+                    }
+                }
+            }
+        }
         // 封装数据
-        model.addAttribute("list", list.getContent());
+        model.addAttribute("list", content);
         model.addAttribute("page", list);
         return "/calledallot/index";
     }
@@ -86,10 +104,27 @@ public class CalledAllotController {
     @GetMapping("/allot")
     @RequiresPermissions("calledallot:calledAllot:allot")
     public String toAllot( Model model, @RequestParam(value = "ids", required = false) List<Integer> ids) {
-        List<User> allEmplooyee = userService.getAllSales(17);
+        List<User> allEmplooyee = userService.getAllSales("6");
         model.addAttribute("allEmplooyee",allEmplooyee);
         model.addAttribute("ids",ids);
         return "/calledallot/allot";
+    }
+    /**
+     * 跳转到分配页面
+     */
+    @PostMapping("/allot")
+    @ResponseBody
+    @RequiresPermissions("calledallot:calledAllot:allot")
+    @Transactional
+    public ResultVo editPassword(String username,
+                                 @RequestParam(value = "ids", required = false) List<Long> ids){
+//                                 @RequestParam(value = "ids", required = false) List<CalledAllot> calledAllots)
+        for(Long id:ids){
+            CalledAllot byId = calledAllotService.getById(id);
+            byId.setUsername(username);
+            calledAllotService.save(byId);
+        }
+        return ResultVoUtil.SAVE_SUCCESS;
     }
 
     /**
@@ -172,11 +207,12 @@ public class CalledAllotController {
     @GetMapping("/edit/{id}")
     @RequiresPermissions("calledallot:calledAllot:edit")
     public String toEdit(@PathVariable("id") CalledAllot calledAllot, Model model) {
-        List<User> allSales = userService.getAllSales(17);
+        List<User> allSales = userService.getAllSales("6");
         CalledAllot user = calledAllotService.getById(calledAllot.getId());
 
         model.addAttribute("calledAllot", user);
         model.addAttribute("users",allSales);
+        model.addAttribute("calledAllot",calledAllot);
         return "/calledallot/add";
     }
 
@@ -217,7 +253,7 @@ public class CalledAllotController {
             CalledAllot beCalledAllot = calledAllotService.getById(calledAllot.getId());
             log.info(beCalledAllot.toString());
             beCalledAllot.setAllotUser(calledAllot.getAllotUser());
-            beCalledAllot.setUserID(calledAllot.getUserID());
+            beCalledAllot.setUsername(calledAllot.getUsername());
             beCalledAllot.setAllotTime(new Date());
             beCalledAllot.setIsRegister(calledAllot.getIsRegister());
             beCalledAllot.setRemake(calledAllot.getRemake());

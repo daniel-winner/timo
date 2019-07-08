@@ -13,6 +13,6 @@ public interface CalledAllotRepository extends BaseRepository<CalledAllot, Long>
 
     CalledAllot findByCalledNum(String nul);
 
-    @Query(value = "update crm_call_allot set calls_num = calls_num+1 where called_num=:phoneNum",nativeQuery = true)
-    int updateCallNumAddOne(@Param("phoneNum")String phoneNum);
+    @Query(value = "update crm_called_allot set calls_num = calls_num+1 where called_num= :phoneNum",nativeQuery = true)
+    void updateCallNumAddOne(@Param("phoneNum")String phoneNum);
 }
