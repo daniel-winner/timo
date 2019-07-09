@@ -43,10 +43,21 @@
             </div>
         </div>
         <div class="layui-form-item">
+            <label class="layui-form-label">回访结果</label>
+            <div class="layui-input-inline">
+                <select class="timo-search-select" style="width: 100px" name="result">
+                    <option value="" >请选择</option>
+                    <option th:each="enmu:${T(com.crm.common.enums.VisitResult).values()}"
+                            th:value="${enmu.code}"
+                            th:text="${enmu.lab}">
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
             <label class="layui-form-label">回访记录</label>
             <div class="layui-input-inline">
-<!--                <input class="layui-input" type="text" name="recorf" placeholder="请输入回访记录" th:value="${accessRecord?.record}">-->
-                <textarea placeholder="请输入内容" class="layui-textarea" name="remark">[[${accessRecord?.record}]]</textarea>
+                <textarea placeholder="请输入内容" class="layui-textarea" name="record">[[${accessRecord?.record}]]</textarea>
             </div>
         </div>
 

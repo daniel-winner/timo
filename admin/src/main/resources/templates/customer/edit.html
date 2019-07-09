@@ -16,14 +16,19 @@
         <div class="layui-form-item">
             <label class="layui-form-label">是否在紧商网注册</label>
             <div class="layui-input-inline">
-<!--                <input class="layui-input" type="text" name="isRegister" placeholder="请输入是否在紧商网注册"  th:value="${calledAllot?.isRegister}">-->
-                <select class="timo-search-select" style="width: 100px" name="isRegister"  mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
+                <select class="timo-search-select"  style="width: 100px" name="isRegister"  mo:dict="REGISTER_STATUS" mo-selected="${param.isRegister}"></select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">在紧商网注册时间</label>
+            <div class="layui-input-inline">
+                <input class="layui-input" type="text" id="dateTime1" name="registerrTime" placeholder="请输入号码" th:value="${calledAllot?.registerrTime}">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">备注</label>
             <div class="layui-input-inline">
-                <input class="layui-input" type="text" name="remake" placeholder="请输入备注" th:value="${calledAllot?.remake}">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="remark">[[${calledAllot?.remake}]]</textarea>
             </div>
         </div>
 

@@ -78,6 +78,8 @@
                         <th>标签</th>
                         <th>类型</th>
                         <th>回访记录</th>
+                        <th>回访结果</th>
+                        <th>备注</th>
                         <th>创建时间</th>
                         <th>操作</th>
                     </tr>
@@ -88,9 +90,11 @@
                             <i class="layui-icon layui-icon-ok"></i></label></td>
                         <td th:text="${item.customerName}">客户名称</td>
                         <td th:text="${item.celledNum}">手机号</td>
-                        <td th:text="${item.lab}">标签</td>
-                        <td th:text="${item.type}">类型</td>
+                        <td th:each="enmu:${T(com.crm.common.enums.Laber).values()}" th:if="${enmu.code eq item.lab }" th:text="${enmu.lab}">标签</td>
+                        <td th:each="enmu:${T(com.crm.common.enums.VisitType).values()}" th:if="${enmu.code eq item.type }" th:text="${enmu.lab}">类型</td>
                         <td th:text="${item.record}">回访记录</td>
+                        <td th:each="enmu:${T(com.crm.common.enums.VisitResult).values()}" th:if="${enmu.code eq item.type }" th:text="${enmu.lab}">回访结果</td>
+                        <td th:text="${item.remark}">备注</td>
                         <td th:text="${#dates.format(item.createDate, 'yyyy-MM-dd HH:mm:ss')}">创建时间</td>
                         <td>
                             <a class="open-popup" data-title="编辑回访记录" th:attr="data-url=@{'/record/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>

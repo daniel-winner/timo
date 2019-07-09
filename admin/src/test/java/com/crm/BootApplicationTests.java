@@ -1,6 +1,7 @@
 package com.crm;
 
 import com.crm.admin.calledallot.repository.CalledAllotRepository;
+import com.crm.admin.calledallot.service.CalledAllotService;
 import com.crm.admin.record.domain.AccessRecord;
 import com.crm.admin.record.repository.AccessRecordRepository;
 import com.crm.modules.system.domain.User;
@@ -21,16 +22,18 @@ import java.util.List;
 public class BootApplicationTests {
 
     @Autowired
-    private UserService userService;
+    private CalledAllotService calledAllotService;
+
     @Autowired
     private AccessRecordRepository accessRecordRepository;
     @Test
     public void contextLoads() throws Exception{
-        AccessRecord accessRecord = new AccessRecord();
-        accessRecord.setId(1001L);
-        accessRecord.setUsername("test");
-        AccessRecord save = accessRecordRepository.save(accessRecord);
-        System.out.println(save.toString());
+        calledAllotService.updateCallNumAddOne("17602173727");
+//        AccessRecord accessRecord = new AccessRecord();
+//        accessRecord.setId(1001L);
+//        accessRecord.setUsername("test");
+//        AccessRecord save = accessRecordRepository.save(accessRecord);
+//        System.out.println(save.toString());
 //        List<User> allSales = userService.getAllSales(17);
 //        allSales.forEach(user -> System.out.println(user.toString()));
 //        File directory = new File("");//参数为空

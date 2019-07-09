@@ -31,7 +31,7 @@ public interface CalledAllotService {
      * 根据号码查询数据
      * @param num 号码
      */
-    CalledAllot getByCalledMun(String num);
+    CalledAllot getByCalledNum(String num);
 
     /**
      * 保存数据

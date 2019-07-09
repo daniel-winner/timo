@@ -38,4 +38,11 @@ public interface AccessRecordService {
      */
     @Transactional
     Boolean updateStatus(StatusEnum statusEnum, List<Long> idList);
+
+    /**
+     * 根据号码获取所有的回访记录
+     * @param calledNum
+     * @return
+     */
+    List<AccessRecord> getByCalledNum(String calledNum);
 }

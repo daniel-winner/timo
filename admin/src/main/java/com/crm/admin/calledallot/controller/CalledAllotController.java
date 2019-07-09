@@ -3,20 +3,21 @@ package com.crm.admin.calledallot.controller;
 import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.admin.calledallot.repository.CalledAllotRepository;
 import com.crm.admin.calledallot.service.CalledAllotService;
+import com.crm.admin.record.domain.AccessRecord;
+import com.crm.admin.record.service.AccessRecordService;
 import com.crm.common.enums.StatusEnum;
 import com.crm.common.utils.ResultVoUtil;
 import com.crm.common.utils.StatusUtil;
 import com.crm.common.vo.ResultVo;
+import com.crm.component.excel.ExcelUtil;
 import com.crm.component.shiro.ShiroUtil;
+import com.crm.devtools.generate.utils.jAngel.utils.StringUtil;
 import com.crm.modules.system.domain.User;
 import com.crm.modules.system.repository.UserRepository;
 import com.crm.modules.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,10 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.lang.reflect.Array;
+import java.text.DecimalFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -54,6 +58,8 @@ public class CalledAllotController {
     private UserService userService;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private AccessRecordService accessRecordService;
 
     /**
      * 列表页面
@@ -122,6 +128,8 @@ public class CalledAllotController {
         for(Long id:ids){
             CalledAllot byId = calledAllotService.getById(id);
             byId.setUsername(username);
+            byId.setAllotUser(ShiroUtil.getSubject().getId());
+            byId.setAllotTime(new Date());
             calledAllotService.save(byId);
         }
         return ResultVoUtil.SAVE_SUCCESS;
@@ -145,35 +153,155 @@ public class CalledAllotController {
                 String ss = "D:/IDEA-workspace/Timo/admin/src/main/resources/upload/"+new Date().getTime()+"_" +filename;
                 log.info(ss);
                 file.transferTo(new File(ss));
-                InputStream inputStream = file.getInputStream();
+                InputStream inputStream = (new FileInputStream(new File(ss)));
                 Workbook workbook = null;
                 if("xlsx".equalsIgnoreCase(substring)){
-                    workbook = new HSSFWorkbook(inputStream);
+                    workbook = new XSSFWorkbook(inputStream);
                 }else{
-                    workbook =  new XSSFWorkbook(inputStream);
+                    workbook =  new HSSFWorkbook(inputStream);
                 }
                 Sheet sheet = workbook.getSheetAt(0);
-                Row row = sheet.getRow(0);
-                Cell cell = row.getCell(0);
-                if (cell!=null){
-                    String cellValue = cell.getStringCellValue();
+                if (workbook==null){
+                    return ResultVoUtil.error("上传的文件错误,请检查后再上传");
+                }
+                if (sheet!=null){
+                    //判断是否使用系统提供的模板
+                    if(!isTemplate(sheet.getRow(0))){
+                        return ResultVoUtil.error("上传的文件错误,请检查后再上传");
+                    }else{
+                        DecimalFormat df = new DecimalFormat("#");
+                        sheet.getLastRowNum();
+                        Date now = new Date();
+                        for(int i = 1; i < sheet.getLastRowNum(); i++ ){
+                            Row row = sheet.getRow(i);
+                            short lastCellNum = row.getLastCellNum();
+                            boolean calledAllot = saveToCalledAllot(row,now);
+                        }
+                    }
                 }
 
             }else {
-
+                return ResultVoUtil.error("处理Excel文本异常");
             }
         } catch (IOException e) {
             e.printStackTrace();
+            log.error("处理Excel文本异常");
+            return ResultVoUtil.error("处理Excel文本异常");
         }
 
-        return null;
+        return ResultVoUtil.success();
+    }
+
+    /**
+     * 获取行内容 保存到号码库中
+     * @param row
+     * @return
+     */
+    private boolean saveToCalledAllot(Row row,Date date) {
+
+        CalledAllot calledAllot = new CalledAllot();
+        String calledNum = ExcelUtil.toStringValue(row.getCell(0));
+        if (StringUtils.isEmpty(calledNum)){
+            return false;
+        }else{
+            String customerName = ExcelUtil.toStringValue(row.getCell(1));
+            String position = ExcelUtil.toStringValue(row.getCell(2));
+            String companyName = ExcelUtil.toStringValue(row.getCell(3));
+            String isRegister = ExcelUtil.toStringValue(row.getCell(4));
+            Date registerTime = row.getCell(5).getDateCellValue();
+            String username = ExcelUtil.toStringValue(row.getCell(6));
+            String lab = ExcelUtil.toStringValue(row.getCell(7));
+            String type = ExcelUtil.toStringValue(row.getCell(8));
+            String result = ExcelUtil.toStringValue(row.getCell(9));
+            String record = ExcelUtil.toStringValue(row.getCell(10));
+            Date allottTime =  row.getCell(11).getDateCellValue();;
+            String remark = ExcelUtil.toStringValue(row.getCell(12));
+            CalledAllot byCalledMun = calledAllotService.getByCalledNum(calledNum);
+            if(byCalledMun==null){
+                byCalledMun.setCalledNum(calledNum);
+                byCalledMun.setCustomerName(customerName);
+                byCalledMun.setCompanyName(companyName);
+                byCalledMun.setPosition(position);
+                byCalledMun.setIsRegister(isRegister==null?0:getRegister(isRegister));
+                byCalledMun.setRegisterrTime(isRegister==null?null:registerTime);
+                byCalledMun.setUsername(username);
+                byCalledMun.setRemake(remark);
+                byCalledMun.setAllotTime(allottTime);
+                byCalledMun.setInputTime(date);
+                byCalledMun.setInputUser(ShiroUtil.getSubject().getId());
+                byCalledMun.setCreateDate(date);
+                byCalledMun.setCallsNum(0);
+                calledAllotService.save(byCalledMun);
+            }
+//            calledAllotService.updateCallNumAddOne();
+            //添加访问记录
+            if(!StringUtils.isEmpty(lab)&&!StringUtils.isEmpty(type)&&!StringUtils.isEmpty(record)) {
+                AccessRecord accessRecord = new AccessRecord();
+                accessRecord.setUsername(username);
+                accessRecord.setCelledNum(calledNum);
+                accessRecord.setCreateDate(date);
+                accessRecord.setCustomerName(customerName);
+                accessRecord.setResult(result);
+                accessRecord.setLab(transLab(lab));
+                calledAllotService.updateCallNumAddOne(calledNum);
+            }
+
+        }
+
+        return true;
+    }
+
+    private Integer transLab(String lab) {
+
+        return 1;
+    }
+
+
+    /**
+     * 注册转换
+     * @param isRegister
+     * @return
+     */
+    private Byte getRegister(String isRegister) {
+        Byte b = 0;
+        switch (isRegister){
+            case "1": b = 1;break;
+            case "是": b = 1;break;
+            default:b=0;
+        }
+        return b;
+    }
+
+    /**
+     * 检测模板中的首行顺序是否一致
+     * @param row
+     * @return
+     */
+    private boolean isTemplate(Row row) {
+        String[] ss =new String[]{"号码","客户名称","职位","公司名","是否在紧商网注册","在紧商网注册时间","业务员","标签","回访结果","回访记录","分配时间","备注"};
+        boolean b = true;
+        if (row==null) {
+            return false;
+        }
+        for(int i = 0; i < ss.length; i++){
+            if (row.getCell(i).getStringCellValue()==null){
+                b=false;
+                break;
+            }else {
+                if (!row.getCell(i).getStringCellValue().contains(ss[i])){
+                    b=false;
+                    break;
+                }
+            }
+        }
+        return b;
     }
 
     /**
      * 下载导入模板
      */
     @GetMapping("/downloadtemplate")
-    public Object downloadtemplate(HttpServletRequest request, HttpServletResponse response) {
+    public void downloadtemplate(HttpServletRequest request, HttpServletResponse response) {
         log.info("系统路径：{}", ResourceUtils.CLASSPATH_URL_PREFIX);
             try {
             String classpath = ResourceUtils.CLASSPATH_URL_PREFIX;
@@ -192,13 +320,10 @@ public class CalledAllotController {
             }
             in.close();
             out.flush();
-            return null;
         } catch (Exception e) {
             e.printStackTrace();
-            ResultVoUtil.error(-1,"下载数据异常");
+//            ResultVoUtil.error(-1,"下载数据异常");
         }
-
-        return null;
     }
 
     /**
@@ -226,7 +351,7 @@ public class CalledAllotController {
     public ResultVo save(CalledAllot calledAllot) {
         // 复制保留无需修改的数据
         if (calledAllot.getCalledNum() != null) {
-            CalledAllot beCalledAllot = calledAllotService.getByCalledMun(calledAllot.getCalledNum());
+            CalledAllot beCalledAllot = calledAllotService.getByCalledNum(calledAllot.getCalledNum());
             if (beCalledAllot != null) {
                 return ResultVoUtil.error("已存在号码:" + calledAllot.getCalledNum() + "，不允许重新添加");
             } else {
@@ -271,7 +396,9 @@ public class CalledAllotController {
     @GetMapping("/detail/{id}")
     @RequiresPermissions("calledallot:calledAllot:detail")
     public String toDetail(@PathVariable("id") CalledAllot calledAllot, Model model) {
+        List<AccessRecord> list =accessRecordService.getByCalledNum(calledAllot.getCalledNum());
         model.addAttribute("calledAllot", calledAllot);
+        model.addAttribute("list", list);
         return "/calledallot/detail";
     }
 

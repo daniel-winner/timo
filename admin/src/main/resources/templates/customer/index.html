@@ -42,6 +42,8 @@
                         </th>
                         <th>号码</th>
                         <th>客户名称</th>
+                        <th>职位</th>
+                        <th>公司</th>
                         <th>是否在紧商网注册</th>
                         <th>在紧商网注册时间</th>
                         <th>号码访问次数</th>
@@ -57,6 +59,8 @@
                             <i class="layui-icon layui-icon-ok"></i></label></td>
                         <td th:text="${item.calledNum}">号码</td>
                         <td th:text="${item.customerName}">客户名称</td>
+                        <td th:text="${item.position}">职位</td>
+                        <td th:text="${item.companyName}">公司</td>
                         <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>
                         <td th:text="${#dates.format(item.registerrTime,'yyyy-MM-dd HH:mm:ss')}">在紧商网注册时间</td>
                         <td th:text="${item.callsNum}">号码访问次数</td>

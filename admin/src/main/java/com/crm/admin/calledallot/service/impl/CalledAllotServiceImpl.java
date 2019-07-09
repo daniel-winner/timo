@@ -21,7 +21,7 @@ import java.util.List;
 @Service
 public class CalledAllotServiceImpl implements CalledAllotService {
     @Override
-    public CalledAllot getByCalledMun(String num) {
+    public CalledAllot getByCalledNum(String num) {
         return calledAllotRepository.findByCalledNum(num);
     }
 

@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java" line="194" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8554ff8-ef03-454d-8f54-71f0f398ff1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/crm/ExcelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/BootApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/controller/CalledAllotController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/domain/CalledAllot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/repository/CalledAllotRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/service/CalledAllotService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/calledallot/service/impl/CalledAllotServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/controller/AccessRecordController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/domain/AccessRecord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/repository/AccessRecordRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/service/AccessRecordService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/service/impl/AccessRecordServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/record/validator/AccessRecordValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/ActionLogController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/DeptController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/DictController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/LoginController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/MainController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/MenuController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/RoleController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/UploadController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/ActionLogValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/DeptValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/DictValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/MenuValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/RoleValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/com/crm/admin/system/validator/UserValid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/crmjs/cellnumlib.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/animated.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/core.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/icons.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/larger.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/list.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/path.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/css/plugins/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/alipay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/char-ccmiao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/chat-left-picture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/chat-right-picture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/chat-single-dog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/images/user-picture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/js/plugins/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/js/plugins/jquery.mousewheel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/js/timoTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/layui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/layui.mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/layer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/53.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/54.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/55.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/56.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/57.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/58.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/59.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/60.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/61.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/62.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/63.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/64.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/65.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/66.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/67.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/68.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/69.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/70.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/71.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/images/face/9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/element.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/flow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/laydate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/layedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/layer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/laypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/laytpl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/rate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/lay/modules/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/layui.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/layui-v2.3.0/layui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/API_cn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/API_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/common_ie6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/apiMenu.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/apiMenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/chinese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/contact-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/english.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/header-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/lightbulb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/overlay_arrow.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/overlay_arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/overlay_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/overlay_close_IE6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/zTreeStandard.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/img/zTreeStandard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/jquery-1.6.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/jquery.ztree.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/apiCss/zTreeStyleForApi.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/fn.zTree._z.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/fn.zTree.destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/fn.zTree.getZTreeObj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/fn.zTree.init.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.autoParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.contentType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.dataFilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.dataType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.headers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.otherParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.async.xhrFields.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeAsync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeCollapse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeDblClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeDrag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeDragOpen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeDrop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeEditName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeMouseDown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeMouseUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeRemove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeRename.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.beforeRightClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onAsyncError.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onAsyncSuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onCollapse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onDblClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onDrag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onDragMove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onDrop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onMouseDown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onMouseUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onNodeCreated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onRemove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onRename.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.callback.onRightClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.autoCheckTrigger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.chkDisabledInherit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.chkStyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.chkboxType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.nocheckInherit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.check.radioType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.keep.leaf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.keep.parent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.checked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.children.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.isHidden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.isParent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.name.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.title.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.key.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.simpleData.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.simpleData.idKey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.simpleData.pIdKey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.data.simpleData.rootPId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.autoExpandTrigger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.autoOpenTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.borderMax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.borderMin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.inner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.isCopy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.isMove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.maxShowNodeNum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.minMoveSize.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.next.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.drag.prev.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.editNameSelectAll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.removeTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.renameTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.showRemoveBtn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.edit.showRenameBtn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.treeId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.treeObj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.addDiyDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.addHoverDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.autoCancelSelected.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.dblClickExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.expandSpeed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.fontCss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.nameIsHTML.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.removeHoverDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.selectedMulti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.showIcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.showLine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.showTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/setting.view.txtSelectedEnable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.check_Child_State.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.check_Focus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.checked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.checkedOld.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.children.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.chkDisabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.click.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.diy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.editNameFlag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getCheckStatus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getNextNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getParentNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getPath.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.getPreNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.halfCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.icon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.iconClose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.iconOpen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.iconSkin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isAjaxing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isFirstNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isHidden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isHover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isLastNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.isParent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.level.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.name.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.nocheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.open.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.parentTId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.tId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.target.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/treeNode.zAsync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.addNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.cancelEditName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.cancelSelectedNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.checkAllNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.checkNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.copyNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.editName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.expandAll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.expandNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getChangeCheckedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getCheckedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodeByParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodeByTId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodeIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodesByFilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodesByParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getNodesByParamFuzzy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.getSelectedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.hideNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.hideNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.moveNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.reAsyncChildNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.reAsyncChildNodesPromise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.refresh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.removeChildNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.removeNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.selectNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.setChkDisabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.setEditable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.showNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.showNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.transformToArray.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.transformTozTreeNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/cn/zTreeObj.updateNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/fn.zTree._z.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/fn.zTree.destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/fn.zTree.getZTreeObj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/fn.zTree.init.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.autoParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.contentType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.dataFilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.dataType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.headers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.otherParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.async.xhrFields.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeAsync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeCollapse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeDblClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeDrag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeDragOpen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeDrop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeEditName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeMouseDown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeMouseUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeRemove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeRename.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.beforeRightClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onAsyncError.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onAsyncSuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onCollapse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onDblClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onDrag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onDragMove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onDrop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onMouseDown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onMouseUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onNodeCreated.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onRemove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onRename.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.callback.onRightClick.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.autoCheckTrigger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.chkDisabledInherit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.chkStyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.chkboxType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.nocheckInherit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.check.radioType.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.keep.leaf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.keep.parent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.checked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.children.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.isHidden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.isParent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.name.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.title.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.key.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.simpleData.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.simpleData.idKey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.simpleData.pIdKey.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.data.simpleData.rootPId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.autoExpandTrigger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.autoOpenTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.borderMax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.borderMin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.inner.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.isCopy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.isMove.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.maxShowNodeNum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.minMoveSize.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.next.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.drag.prev.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.editNameSelectAll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.enable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.removeTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.renameTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.showRemoveBtn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.edit.showRenameBtn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.treeId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.treeObj.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.addDiyDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.addHoverDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.autoCancelSelected.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.dblClickExpand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.expandSpeed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.fontCss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.nameIsHTML.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.removeHoverDom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.selectedMulti.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.showIcon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.showLine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.showTitle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/setting.view.txtSelectedEnable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.check_Child_State.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.check_Focus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.checked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.checkedOld.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.children.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.chkDisabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.click.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.diy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.editNameFlag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getCheckStatus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getNextNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getParentNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getPath.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.getPreNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.halfCheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.icon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.iconClose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.iconOpen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.iconSkin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isAjaxing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isFirstNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isHidden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isHover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isLastNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.isParent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.level.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.name.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.nocheck.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.open.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.parentTId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.tId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.target.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.url.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/treeNode.zAsync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.addNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.cancelEditName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.cancelSelectedNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.checkAllNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.checkNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.copyNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.destroy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.editName.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.expandAll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.expandNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getChangeCheckedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getCheckedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodeByParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodeByTId.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodeIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodesByFilter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodesByParam.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getNodesByParamFuzzy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.getSelectedNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.hideNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.hideNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.moveNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.reAsyncChildNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.reAsyncChildNodesPromise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.refresh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.removeChildNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.removeNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.selectNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.setChkDisabled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.setEditable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.showNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.showNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.transformToArray.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.transformTozTreeNodes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/api/en/zTreeObj.updateNode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/awesomeStyle/awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/awesomeStyle/awesome.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/awesomeStyle/fa.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/awesomeStyle/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/metroStyle/img/line_conn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/metroStyle/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/metroStyle/img/metro.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/metroStyle/img/metro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/metroStyle/metroStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/1_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/1_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/diy/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/line_conn.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/zTreeStandard.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/img/zTreeStandard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/css/zTreeStyle/zTreeStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.excheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.excheck.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.exedit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.exedit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.exhide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/static/lib/zTree_v3/js/jquery.ztree.exhide.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/calledallot/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/calledallot/allot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/calledallot/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/calledallot/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/common/fragment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/common/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/customer/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/customer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/files/名单导入模板.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/record/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/record/addRecord.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/record/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/record/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/actionLog/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/actionLog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dept/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dept/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dept/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dict/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dict/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/dict/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/main/editPwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/main/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/main/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/main/noAuth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/main/userInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/menu/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/menu/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/menu/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/role/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/role/auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/role/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/role/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/role/user_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/user/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/user/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/user/pwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/templates/system/user/role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/classes/upload/1562294330770_新员工平台学习进度表.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/test-classes/com/crm/BootApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/target/test-classes/com/crm/common/utils/EncryptUtilTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/config/XssFilterConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/config/properties/ProjectProperties$Xxs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/config/properties/ProjectProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/constant/AdminConst.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/constant/StatusConst.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/data/PageSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/data/QuerySpec$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/data/QuerySpec.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/data/URL.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/enums/ResultEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/enums/StatusEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/exception/ResultException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/exception/ResultExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/exception/advice/ExceptionAdvice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/exception/advice/ResultExceptionAdvice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/exception/interfaces/ResultInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/mysql/MySQLDialectUTF8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/CaptchaUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/EhCacheUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/EncryptUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/EntityBeanUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/HttpServletUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/ResultVoUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/SpringContextUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/StatusUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/utils/ToolUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/vo/ResultVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/xss/XssFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/target/classes/com/crm/common/xss/XssHttpServletRequestWrapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/RoleAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/SaveAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/StatusAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/SystemAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/UserAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/base/ActionMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/base/ResetLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/ActionModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/BusinessMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/BusinessType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/LoginMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/LoginType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/SystemMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/action/model/SystemType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/annotation/ActionLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/annotation/ActionLogAop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/annotation/EntityParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/exception/ActionLogProceedAdvice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/actionLog/target/classes/com/crm/component/actionLog/exception/ActionLogProceedAdviceConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/excel/target/classes/com/crm/component/excel/ExcelUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/excel/target/classes/com/crm/component/excel/annotation/Excel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/excel/target/classes/com/crm/component/excel/enums/ExcelType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/fileUpload/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/fileUpload/target/classes/com/crm/component/fileUpload/FileUpload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/fileUpload/target/classes/com/crm/component/fileUpload/config/UploadFileConfigurer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/fileUpload/target/classes/com/crm/component/fileUpload/config/properties/UploadProjectProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/fileUpload/target/classes/com/crm/component/fileUpload/enums/UploadResultEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/AuthRealm$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/AuthRealm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/ShiroUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/UserAuthFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/config/AuditorConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/config/ShiroConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/config/properties/ShiroProjectProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/shiro/target/classes/com/crm/component/shiro/exception/AuthorizationExceptionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/TimoDialect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/TimoExpressionObjectFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/attribute/SelectDictAttrProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/attribute/SelectListAttrProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/config/ThymeleafConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/utility/DictUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/utility/LogUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/component/thymeleaf/target/classes/com/crm/component/thymeleaf/utility/PageUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/build/BuildController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/DefaultValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/GenerateController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/domain/Basic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/domain/Field.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/domain/Generate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/domain/Template.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/enums/FieldQuery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/enums/FieldType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/enums/FieldVerify.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/enums/ModuleType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/enums/TierType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/AddHtmlTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/AddHtmlTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ControllerTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ControllerTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/DetailHtmlTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/DetailHtmlTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/EntityTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/IndexHtmlTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/IndexHtmlTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/PomXmlTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/PomXmlTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/RepositoryTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/RepositoryTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ServiceImplTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ServiceImplTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ServiceTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ServiceTemplate.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/template/ValidatorTemplate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/CodeUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/FileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/GenerateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/JAngel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/JAngelContainer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/BlockNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/ClassNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/Document.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/FieldNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/Format.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/LineNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/MethodNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/Modifier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/nodes/Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/parser/Expression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/parser/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/select/Nodes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/select/Select.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/jAngel/utils/StringUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/parser/HtmlParseUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/parser/JavaParseUtil$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/parser/JavaParseUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/generate/utils/parser/XmlParseUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/swagger/SwaggerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/com/crm/devtools/swagger/config/SwaggerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/css/build.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/css/generate.code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/js/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/js/generate.code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/lib/formSelects-v4/formSelects-v4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/static/lib/formSelects-v4/formSelects-v4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/templates/devtools/build/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/devtools/target/classes/templates/devtools/generate/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/META-INF/system.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/common/enums/Laber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/common/enums/VisitType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/ActionLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/Dept.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/Dict.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/Upload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/domain/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/enums/ActionLogEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/enums/DictTypeEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/enums/MenuTypeEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/ActionLogRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/BaseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/DeptRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/DictRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/MenuRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/RoleRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/UploadRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/ActionLogService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/DeptService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/DictService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/MenuService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/RoleService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/UploadService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/ActionLogServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/DeptServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/DictServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/MenuServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/RoleServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/UploadServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/UserServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/system/target/classes/com/crm/modules/system/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/CalledAllotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/CalledAllotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/impl/CalledAllotServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/impl/CalledAllotServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/controller/AccessRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/controller/AccessRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/domain/AccessRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/domain/AccessRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/repository/AccessRecordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/repository/AccessRecordRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/AccessRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/AccessRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/impl/AccessRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/impl/AccessRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/customer/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/customer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/customer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/files/名单导入模板.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/files/名单导入模板.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/record/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/record/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/record/addRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/record/addRecord.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/record/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/record/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/templates/record/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/templates/record/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/test/java/com/crm/BootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/test/java/com/crm/BootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/excel/src/main/java/com/crm/component/excel/ExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/component/excel/src/main/java/com/crm/component/excel/ExcelUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitType.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitType.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/component/target/" />
+    <ignored path="$PROJECT_DIR$/component/thymeleaf/target/" />
+    <ignored path="$PROJECT_DIR$/component/jwt/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/component/shiro/target/" />
+    <ignored path="$PROJECT_DIR$/modules/target/" />
+    <ignored path="$PROJECT_DIR$/modules/system/target/" />
+    <ignored path="$PROJECT_DIR$/devtools/target/" />
+    <ignored path="$PROJECT_DIR$/component/excel/target/" />
+    <ignored path="$PROJECT_DIR$/admin/target/" />
+    <ignored path="$PROJECT_DIR$/component/fileUpload/target/" />
+    <ignored path="$PROJECT_DIR$/component/actionLog/target/" />
+    <ignored path="$PROJECT_DIR$/modules/user_role/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="240" column="53" selection-start-line="240" selection-start-column="53" selection-end-line="240" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/CalledAllotService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/repository/CalledAllotRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/excel/src/main/java/com/crm/component/excel/ExcelUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="415" column="24" selection-start-line="415" selection-start-column="17" selection-end-line="415" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/crm/ExcelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/crm/BootApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="30" column="62" lean-forward="true" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>upload</find>
+      <find>不是后台</find>
+      <find>update</find>
+      <find>captcha</find>
+      <find>Session</find>
+      <find>detail</find>
+      <find>updateBy</find>
+      <find>calledNum</find>
+      <find>calledAllot</find>
+      <find>小懒虫</find>
+      <find>bind</find>
+      <find>from</find>
+      <find>user</find>
+      <find>edit</find>
+      <find>userId</find>
+      <find>user.Id</find>
+      <find>pwd</find>
+      <find>17</find>
+      <find>system.err</find>
+      <find>16,17</find>
+      <find>open-popup</find>
+      <find>/add</find>
+      <find>dates</find>
+      <find>remake</find>
+      <find>open-popup-param</find>
+      <find>role</find>
+      <find>allot</find>
+      <find>poi.version</find>
+      <find>poi</find>
+      <find>updateCallNumAddOne</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>dxf</replace>
+      <replace>6</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/modules/system/pom.xml" />
+        <option value="$PROJECT_DIR$/component/thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/component/actionLog/pom.xml" />
+        <option value="$PROJECT_DIR$/component/jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/component/fileUpload/pom.xml" />
+        <option value="$PROJECT_DIR$/component/shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/devtools/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/system/controller/DictController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/calledAllot/add.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/static/crmjs/cellnumlib.js" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/system/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/modules/system/domain/User.java" />
+        <option value="$PROJECT_DIR$/component/shiro/src/main/java/com/crm/component/shiro/ShiroUtil.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/crm/common/utils/EncryptUtil.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/customerController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/add.html" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/modules/system/service/UserService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/customer/detail.html" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/modules/system/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/modules/system/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/lab.java" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/Laber.java" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/Laber.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/domain/CalledAllot.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/repository/CalledAllotRepository.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/allot.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/index.html" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitType.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/domain/AccessRecord.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/customer/edit.html" />
+        <option value="$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitResult.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/record/add.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/record/addRecord.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/AccessRecordService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/repository/AccessRecordRepository.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/impl/AccessRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/record/index.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/detail.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/record/detail.html" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/templates/customer/index.html" />
+        <option value="$PROJECT_DIR$/component/excel/pom.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/crm/common/utils/ExcelUtils.java" />
+        <option value="$PROJECT_DIR$/admin/src/test/java/com/crm/ExcelTest.java" />
+        <option value="$PROJECT_DIR$/component/excel/src/main/java/com/crm/component/excel/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/CalledAllotService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/impl/CalledAllotServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/controller/AccessRecordController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java" />
+        <option value="$PROJECT_DIR$/admin/src/test/java/com/crm/BootApplicationTests.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/soft/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\soft\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="79" />
+    <option name="y" value="5" />
+    <option name="width" value="1809" />
+    <option name="height" value="1001" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="calledallot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="calledallot" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="calledallot" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="calledallot" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="timo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timo" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crm" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/main/resources/templates/files" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/index.html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\calledallot" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\calledallot\calledAllot" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\files" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.crm.common.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\files" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\record" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\customer" />
+      <recent name="D:\IDEA-workspace\Timo\admin\src\main\resources\templates\calledallot" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.BootApplicationTests.contextLoads">
+    <configuration name="ExcelTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.crm.ExcelTest" />
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.crm" />
+      <option name="MAIN_CLASS_NAME" value="com.crm.BootApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.crm.BootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BootApplicationTests.contextLoads" />
+        <item itemvalue="Application.ExcelTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8554ff8-ef03-454d-8f54-71f0f398ff1e" name="Default Changelist" comment="" />
+      <created>1562148546599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562148546599</updated>
+      <workItem from="1562148552473" duration="3296000" />
+      <workItem from="1562202027886" duration="26467000" />
+      <workItem from="1562287917571" duration="78848000" />
+      <workItem from="1562633964620" duration="27963000" />
+    </task>
+    <task id="LOCAL-00001" summary="111">
+      <created>1562151826380</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562151826380</updated>
+    </task>
+    <task id="LOCAL-00002" summary="111">
+      <created>1562235038111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562235038111</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改完成author，添加业务呼叫菜单">
+      <created>1562384687853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562384687854</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2019年7月8日18:39:09">
+      <created>1562582388242</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562582388242</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.05 at 16h 27m 29s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.05 at 16h 28m 42s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.05 at 16h 29m 54s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 02m 21s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 11m 25s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 12m 04s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 14m 28s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 16m 23s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 21m 19s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BootApplicationTests_contextLoads - 2019.07.08 at 17h 23m 12s.xml">
+      <configuration name="BootApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="136574000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="79" y="5" width="1809" height="1001" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68844986" visible="true" weight="0.23670669" />
+      <window_info id="Structure" order="1" sideWeight="0.31155014" side_tool="true" visible="true" weight="0.23670669" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298731" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49914238" visible="true" weight="0.24106114" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41637832" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3298731" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298731" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50085765" side_tool="true" weight="0.35409456" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.25374857" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298731" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32871974" />
+      <window_info anchor="bottom" id="Problems" order="15" weight="0.3298731" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Preview" order="6" weight="0.11661017" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="111" />
+    <MESSAGE value="修改完成author，添加业务呼叫菜单" />
+    <MESSAGE value="2019年7月8日18:39:09" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019年7月8日18:39:09" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/modules/system/src/main/java/com/crm/modules/system/repository/UploadRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.6.RELEASE/spring-data-commons-2.1.6.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/Subject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#2572#2573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/shiro/src/main/java/com/crm/component/shiro/config/AuditorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/SecurityUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/system/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3914">
+          <caret line="249" column="40" selection-start-line="249" selection-start-column="28" selection-end-line="249" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/system/user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="51" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/Laber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/static/crmjs/cellnumlib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/domain/AccessRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="71" column="38" lean-forward="true" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/customer/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/record/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="54" column="14" selection-start-line="44" selection-start-column="8" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/system/src/main/java/com/crm/common/enums/VisitType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/record/addRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/AccessRecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/repository/AccessRecordRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/service/impl/AccessRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/record/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="97" selection-end-column="104" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/allot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="75" lean-forward="true" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/record/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="29" column="62" lean-forward="true" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/calledallot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="89" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/templates/customer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/crm/common/utils/EncryptUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/crm/common/utils/ResultVoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0.jar!/org/apache/poi/ss/usermodel/Sheet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/usermodel/Sheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="282" column="49" selection-start-line="282" selection-start-column="49" selection-end-line="282" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/util/CellUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/hssf/usermodel/HSSFCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2192">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/usermodel/CellStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/hssf/usermodel/HSSFCellStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/util/SheetUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="169" column="36" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-753" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/excel/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/crm/common/utils/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/4.0.0/poi-4.0.0-sources.jar!/org/apache/poi/ss/usermodel/CellType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/excel/src/main/java/com/crm/component/excel/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="415" column="24" selection-start-line="415" selection-start-column="17" selection-end-line="415" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/record/controller/AccessRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="126" column="31" lean-forward="true" selection-start-line="126" selection-start-column="31" selection-end-line="126" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/crm/ExcelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/repository/CalledAllotRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/impl/CalledAllotServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="72" column="61" lean-forward="true" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="61" />
+          <folding>
+            <element signature="e#1985#1986#0" expanded="true" />
+            <element signature="e#2053#2054#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/service/CalledAllotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/crm/admin/calledallot/controller/CalledAllotController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="240" column="53" selection-start-line="240" selection-start-column="53" selection-end-line="240" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/crm/BootApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="62" lean-forward="true" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -8,12 +8,12 @@ public enum VisitType {
     VisitType() {
     }
 
-    VisitType(Integer code, String lab) {
+    VisitType(Integer code, String type) {
         this.code = code;
-        this.lab = lab;
+        this.type = type;
     }
     private Integer code;
-    private String lab;
+    private String type;
 
     public Integer getCode() {
         return code;
@@ -24,11 +24,11 @@ public enum VisitType {
     }
 
     public String getLab() {
-        return lab;
+        return type;
     }
 
-    public void setLab(String lab) {
-        this.lab = lab;
+    public void setLab(String type) {
+        this.type = type;
     }
 
 }

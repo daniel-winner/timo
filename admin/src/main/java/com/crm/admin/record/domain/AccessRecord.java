@@ -50,6 +50,9 @@ public class AccessRecord implements Serializable {
     private Date createDate;
     // 业务员
     private String username;
+    @Lob
+    @Column(columnDefinition="TEXT")
+    private String result;
 
     private Byte status = 0;
 
@@ -66,6 +69,7 @@ public class AccessRecord implements Serializable {
                 ", createDate=" + createDate +
                 ", username='" + username + '\'' +
                 ", status=" + status +
+                ", result=" + result +
                 '}';
     }
 }

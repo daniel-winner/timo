@@ -30,6 +30,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -398,5 +399,25 @@ public class ExcelUtil {
         }
 
         return list;
+    }
+
+    /**
+     * 获取string类型的数据
+     * @param cell
+     * @return
+     */
+    public static String toStringValue(Cell cell){
+        String value ;
+        DecimalFormat df = new DecimalFormat("#");
+        switch (cell.getCellType()){
+            case STRING:
+                value = cell.getStringCellValue();
+                break;
+            case NUMERIC:
+                value = df.format(cell.getNumericCellValue());
+                break;
+            default:value ="";
+        }
+        return value;
     }
 }

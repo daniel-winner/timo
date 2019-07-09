@@ -2,6 +2,8 @@ package com.crm.admin.calledallot.controller;
 
 import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.admin.calledallot.service.CalledAllotService;
+import com.crm.admin.record.domain.AccessRecord;
+import com.crm.admin.record.service.AccessRecordService;
 import com.crm.component.shiro.ShiroUtil;
 import com.crm.modules.system.domain.User;
 import com.crm.modules.system.repository.UserRepository;
@@ -29,6 +31,8 @@ public class CustomerController {
     private CalledAllotService calledAllotService;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private AccessRecordService accessRecordService;
 
     @GetMapping("index")
     @RequiresPermissions("customer:index")
@@ -73,7 +77,9 @@ public class CustomerController {
     @GetMapping("/detail/{id}")
     @RequiresPermissions("customer:detail")
     public String toDetail(@PathVariable("id") CalledAllot calledAllot, Model model) {
+        List<AccessRecord> list =accessRecordService.getByCalledNum(calledAllot.getCalledNum());
         model.addAttribute("calledAllot", calledAllot);
-        return "/customer/detail";
+        model.addAttribute("list", list);
+        return "/calledallot/detail";
     }
 }

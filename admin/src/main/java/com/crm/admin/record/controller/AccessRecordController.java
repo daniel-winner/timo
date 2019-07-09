@@ -123,7 +123,7 @@ public class AccessRecordController {
 //            AccessRecord beAccessRecord = accessRecordService.getById(accessRecord.getId());
 //            EntityBeanUtil.copyProperties(beAccessRecord, accessRecord);
 //        }
-        CalledAllot byCalledMun = calledAllotService.getByCalledMun(accessRecord.getCelledNum());
+        CalledAllot byCalledMun = calledAllotService.getByCalledNum(accessRecord.getCelledNum());
         if(byCalledMun!=null) {
             byCalledMun.setCallsNum(byCalledMun.getCallsNum() + 1);
             calledAllotService.save(byCalledMun);

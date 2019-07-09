@@ -63,4 +63,9 @@ public class AccessRecordServiceImpl implements AccessRecordService {
     public Boolean updateStatus(StatusEnum statusEnum, List<Long> idList) {
         return accessRecordRepository.updateStatus(statusEnum.getCode(), idList) > 0;
     }
+
+    @Override
+    public List<AccessRecord> getByCalledNum(String calledNum) {
+        return  accessRecordRepository.findAllByCelledNum(calledNum);
+    }
 }
