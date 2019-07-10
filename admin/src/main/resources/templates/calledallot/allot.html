@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" >
 <head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+    <style>
+        .timo-compile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 14px;
+            margin-bottom: 0;
+            background-color: #ffffff;
+        }
+        .timo-finally {
+            position: fixed;
+            bottom: 0;
+            left: 30px;
+            right: 0;
+            padding-bottom: 14px;
+            margin-bottom: 0;
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    <div class="layui-form timo-compile">
+<div class="layui-form timo-compile">
     <form th:action="@{/calledallot/calledAllot/allot}">
         <input th:each="id:${ids}" type="hidden" name="ids" th:value="${id}"/>
         <div class="layui-form-item">
@@ -25,6 +45,6 @@
     </form>
 </div>
 <script th:replace="/common/template :: script"></script>
-<!--<script th:src="@{/crmjs/cellnumlib.js}" src="../static/crmjs/cellnumlib.js"></script>-->
+
 </body>
 </html>

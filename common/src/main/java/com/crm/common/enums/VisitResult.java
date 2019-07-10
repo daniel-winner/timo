@@ -38,5 +38,17 @@ public enum VisitResult {
     public void setLab(String lab) {
         this.lab = lab;
     }
-
+    /**
+     * 根据枚举类的值获取code
+     * @param lab
+     * @return
+     */
+    public static Integer getCodeByLab(String lab){
+        for(int i =0; i < VisitResult.values().length; i++){
+            if (lab.equalsIgnoreCase(VisitResult.values()[i].getLab())){
+                return  VisitResult.values()[i].getCode();
+            }
+        }
+        return 0;
+    }
 }

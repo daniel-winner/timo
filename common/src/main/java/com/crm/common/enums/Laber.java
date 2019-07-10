@@ -37,4 +37,18 @@ public enum Laber {
         this.lab = lab;
     }
 
+    /**
+     * 根据枚举类的值获取code
+     * @param lab
+     * @return
+     */
+    public static Integer getCodeByLab(String lab){
+        for(int i =0; i < Laber.values().length; i++){
+            if (lab.equalsIgnoreCase(Laber.values()[i].getLab())){
+                return  Laber.values()[i].getCode();
+            }
+        }
+        return 0;
+    }
+
 }

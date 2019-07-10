@@ -68,9 +68,9 @@
                         <td th:text="${#dates.format(item.inputTime,'yyyy-MM-dd HH:mm:ss')}">号码导入时间</td>
                         <td th:text="${item.remake}">备注</td>
                         <td>
-                            <a class="open-popup" data-title="编辑" th:attr="data-url=@{'/customer/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="编辑" th:attr="data-url=@{'/customer/edit/'+${item.id}}" data-size="470,500" href="#">编辑</a>
                             <a class="open-popup" data-title="回访记录" th:attr="data-url=@{'/customer/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
-                            <a class="open-popup" data-title="添加回访记录" th:attr="data-url=@{'/record/add_record/'+${item.id}}" data-size="auto">添加回访记录</a>
+                            <a class="open-popup" data-title="添加回访记录" th:attr="data-url=@{'/record/add_record/'+${item.id}}" data-size="520,700">添加回访记录</a>
                         </td>
                     </tr>
                     </tbody>

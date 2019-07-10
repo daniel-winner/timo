@@ -63,7 +63,7 @@ public class CalledAllot implements Serializable {
     private Long inputUser;
     // 分配人
     private Long allotUser;
-    private Byte status;
+    private Byte status =1;
     private Date createDate;
 
     @Override

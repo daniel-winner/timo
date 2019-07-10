@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="pull-right screen-btn-group">
-                    <button class="layui-btn open-popup-param" id="allot" data-title="名单分配" th:attr="data-url=@{/calledallot/calledAllot/allot}"  data-size="480,100">
+                    <button class="layui-btn open-popup-param" id="allot" data-title="名单分配" th:attr="data-url=@{/calledallot/calledAllot/allot}"  data-size="430,300">
                         <i class="fa fa-plus"></i> 名单分配</button>
 <!--                    <button class="layui-btn open-popup-param" data-type="radio" data-title="角色分配" th:attr="data-url=@{/system/user/role}" data-size="480,400">-->
 <!--                        <i class="fa fa-user-secret"></i> 角色分配</button>-->
@@ -96,7 +96,7 @@
                         <td th:text="${#dates.format(item.inputTime,'yyyy-MM-dd HH:mm:ss')}">导入时间</td>
                         <td th:text="${item.remake}">备注</td>
                         <td>
-                            <a class="open-popup" data-title="号码分配" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="编辑" th:attr="data-url=@{'/calledallot/calledAllot/edit/'+${item.id}}" data-size="470,400" href="#">编辑</a>
                             <a class="open-popup" data-title="详细信息" th:attr="data-url=@{'/calledallot/calledAllot/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
                         </td>
                     </tr>

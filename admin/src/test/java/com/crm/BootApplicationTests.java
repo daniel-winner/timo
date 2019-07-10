@@ -1,5 +1,6 @@
 package com.crm;
 
+import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.admin.calledallot.repository.CalledAllotRepository;
 import com.crm.admin.calledallot.service.CalledAllotService;
 import com.crm.admin.record.domain.AccessRecord;
@@ -25,10 +26,26 @@ public class BootApplicationTests {
     private CalledAllotService calledAllotService;
 
     @Autowired
+    private CalledAllotRepository calledAllotRepository;
+    @Autowired
     private AccessRecordRepository accessRecordRepository;
+
+    @Test
+    public void saveAndRead(){
+        CalledAllot call =new CalledAllot();
+        call.setCalledNum("7895461230");
+        call.setStatus((byte)1);
+        call.setCallsNum(0);
+        CalledAllot save = calledAllotService.save(call);
+        System.out.println(save.toString());
+        CalledAllot byCalledNum = calledAllotService.getByCalledNum("7895461230");
+        System.out.println(byCalledNum.toString());
+        CalledAllot byCalledNum1 = calledAllotService.getByCalledNum("7895461230");
+        System.out.println(byCalledNum1.toString());
+    }
+
     @Test
     public void contextLoads() throws Exception{
-        calledAllotService.updateCallNumAddOne("17602173727");
 //        AccessRecord accessRecord = new AccessRecord();
 //        accessRecord.setId(1001L);
 //        accessRecord.setUsername("test");

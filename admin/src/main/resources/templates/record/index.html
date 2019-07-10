@@ -15,7 +15,7 @@
                     <div class="layui-inline">
                         <label class="layui-form-label">手机号</label>
                         <div class="layui-input-block">
-                            <input type="text" name="celledNum" th:value="${param.celledNum}" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                            <input type="text" name="celledNum" disabled th:value="${param.celledNum}" placeholder="请输入手机号" autocomplete="off" class="layui-input">
                         </div>
                     </div>
 
@@ -97,7 +97,7 @@
                         <td th:text="${item.remark}">备注</td>
                         <td th:text="${#dates.format(item.createDate, 'yyyy-MM-dd HH:mm:ss')}">创建时间</td>
                         <td>
-                            <a class="open-popup" data-title="编辑回访记录" th:attr="data-url=@{'/record/edit/'+${item.id}}" data-size="auto" href="#">编辑</a>
+                            <a class="open-popup" data-title="编辑回访记录" th:attr="data-url=@{'/record/edit/'+${item.id}}" data-size="550,700" href="#">编辑</a>
                             <a class="open-popup" data-title="详细信息" th:attr="data-url=@{'/record/detail/'+${item.id}}" data-size="800,600" href="#">详细</a>
 <!--                            <a class="ajax-get" data-msg="您是否确认删除" th:href="@{/record/status/delete(ids=${item.id})}">删除</a>-->
                         </td>

@@ -2,11 +2,14 @@ package com.crm.admin.calledallot.service;
 
 import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.common.enums.StatusEnum;
+import org.apache.poi.ss.usermodel.Row;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 段祥府
@@ -49,5 +52,12 @@ public interface CalledAllotService {
     /**
      * 更新被访问次数
      */
-    void updateCallNumAddOne(String cellednum);
+    void updateCallsNum(String cellednum,int size);
+    void updateCallsNumAddOne(String cellednum);
+    /**
+     * 获取行内容 保存到号码库中
+     * @param row
+     * @return
+     */
+    public Map<String ,Integer> saveToCalledAllot(Row row, Date date);
 }

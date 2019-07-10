@@ -407,6 +407,9 @@ public class ExcelUtil {
      * @return
      */
     public static String toStringValue(Cell cell){
+        if (cell==null){
+            return "";
+        }
         String value ;
         DecimalFormat df = new DecimalFormat("#");
         switch (cell.getCellType()){

@@ -13,29 +13,33 @@ import java.text.DecimalFormat;
 
 public class ExcelTest {
     public static void main(String[] args) throws Exception{
-        String ss ="D:\\IDEA-workspace\\Timo\\admin\\src\\main\\resources\\upload\\1562644522017_名单导入模板.xlsx";
+        String ss ="D:\\IDEA-workspace\\Timo\\admin\\src\\main\\resources\\upload\\1562738071893_名单导入模板.xlsx";
         InputStream inputStream = (new FileInputStream(new File(ss)));
         Workbook workbook = new XSSFWorkbook(inputStream);
         Sheet sheet0 = workbook.getSheetAt(0);
-        Row row = sheet0.getRow(1);
-
-
-        System.out.println(row.getCell(0).getNumericCellValue());
-//        System.out.println(toStringValue(row.getCell(4)));
+        for (int i=0 ;i< sheet0.getLastRowNum(); i++){
+            Row row = sheet0.getRow(i);
+            Cell cell = row.getCell(4);
+            System.out.println(toStringValue(cell));
+        }
 
 
     }
+
     public static String toStringValue(Cell cell){
-        String value ="";
+        if (cell==null){
+            return "";
+        }
+        String value ;
         DecimalFormat df = new DecimalFormat("#");
         switch (cell.getCellType()){
             case STRING:
                 value = cell.getStringCellValue();
-            break;
+                break;
             case NUMERIC:
                 value = df.format(cell.getNumericCellValue());
                 break;
-            default:cell.getStringCellValue();
+            default:value ="";
         }
         return value;
     }

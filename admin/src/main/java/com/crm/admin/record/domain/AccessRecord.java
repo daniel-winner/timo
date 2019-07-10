@@ -44,15 +44,15 @@ public class AccessRecord implements Serializable {
     @Column(columnDefinition="TEXT")
     private String record;
     // 备注
+    @Column(columnDefinition="TEXT")
     private String remark;
     // 创建时间
     @CreatedDate
     private Date createDate;
     // 业务员
     private String username;
-    @Lob
-    @Column(columnDefinition="TEXT")
-    private String result;
+
+    private Integer result;
 
     private Byte status = 0;
 

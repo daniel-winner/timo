@@ -31,4 +31,13 @@ public enum VisitType {
         this.type = type;
     }
 
+    public static Integer getCodeByType(String type){
+        for(int i =0; i < VisitType.values().length; i++){
+            if (type.equalsIgnoreCase(VisitType.values()[i].getLab())){
+                return  VisitType.values()[i].getCode();
+            }
+        }
+        return 0;
+    }
+
 }
