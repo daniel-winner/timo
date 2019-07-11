@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:mo="https://gitee.com/aun/Timo">
+<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+    <link rel="stylesheet" th:href="@{/lib/zTree_v3/css/zTreeStyle/zTreeStyle.css}" type="text/css">
+</head>
+<body class="timo-layout-page">
+<div class="timo-table-wrap">
+    <table class="layui-table timo-table">
+        <thead>
+        <tr>
+            <th hidden="hidden"></th>
+            <th>消息头</th>
+            <th>消息内容</th>
+            <th>时间</th>
+            <th>消息状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item:${messages}">
+            <td hidden="hidden" th:value="${item.id}"></td>
+            <td th:text="${item.title}">消息头</td>
+            <td th:text="${item.content}">消息内容</td>
+            <td th:text="${#dates.format(item.createTime,'yyyy-MM-dd HH:mm:ss')}">时间</td>
+            <td th:text="${item.isRead}==0?'未读':'已读'">消息状态</td>
+<!--            <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>-->
+            <td>
+                <a class="open-popup" data-title="编辑" th:attr="data-url=@{'/message/read/'+${item.id}}" data-size="470,500" href="#">读取消息</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div th:replace="/common/fragment :: page"></div>
+</div>
+
+
+<script th:replace="/common/template :: script"></script>
+<script type="text/javascript">
+    // $.fn.timoTree();
+</script>
+</body>
+</html>

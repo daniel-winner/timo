@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+</head>
+<body>
+    <div class="timo-detail-page">
+<!--        <div class="timo-detail-title">消息详情</div>-->
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header" th:text="${message.title}"></div>
+                <div class="layui-card-body">
+                    <p th:text="${message.content}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+<script th:replace="/common/template :: script"></script>
+</body>
+</html>

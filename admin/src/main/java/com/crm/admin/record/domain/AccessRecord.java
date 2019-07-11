@@ -25,7 +25,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="crm_access_record")
 @EntityListeners(AuditingEntityListener.class)
-@Where(clause = StatusUtil.notDelete)
 public class AccessRecord implements Serializable {
     // 主键ID
     @Id
@@ -40,7 +39,7 @@ public class AccessRecord implements Serializable {
     // 类型
     private Integer type;
     // 回访记录
-    @Lob
+//    @Lob
     @Column(columnDefinition="TEXT")
     private String record;
     // 备注
