@@ -11,16 +11,31 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementSetter;
+import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.sql.DataSource;
 import java.io.File;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
 public class BootApplicationTests {
+
+
+    @Autowired
+    @Qualifier("secodJdbcTemplate")
+    private JdbcTemplate jdbcTemplate;
+
 
     @Autowired
     private CalledAllotService calledAllotService;
@@ -58,6 +73,12 @@ public class BootApplicationTests {
 //        String author =directory.getAbsolutePath();//绝对路径;
 //        System.out.println(courseFile);
 //        System.out.println(author);
+    }
+
+    @Test
+    public void dateSource(){
+        int count = jdbcTemplate.queryForObject("select count(1) from member ", Integer.class);
+        System.out.println(count);
     }
 
 }

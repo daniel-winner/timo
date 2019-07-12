@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -50,8 +51,13 @@ public class MessageController {
     public String read(Model model, @PathVariable("id")Long id){
         Message message = messageService.getById(id);
         int i = messageService.updateStatusById(id);
-        System.err.println(message.toString()+"==========="+i);
         model.addAttribute("message",message);
         return  "/system/message/read";
+    }
+    @GetMapping("readed/{id}")
+    @ResponseBody
+    public Integer readed(@PathVariable("id")String id){
+        System.err.println(id);
+        return messageService.updateStatusById(Long.parseLong(id));
     }
 }

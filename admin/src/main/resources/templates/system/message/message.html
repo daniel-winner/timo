@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" >
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
-<style>
+    <style>
 
-</style>
+    </style>
 </head>
 <body>
 <div class="timo-compile">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
         <legend>未读消息</legend>
     </fieldset>
-    <div class="layui-collapse" lay-filter="test" style="margin-left: 20px;margin-right: 20px; margin-bottom: 20px">
+    <div class="layui-collapse" lay-filter="msg" style="margin-left: 20px;margin-right: 20px; margin-bottom: 20px">
         <div class="layui-colla-item" th:each="message:${messages}">
             <h2 class="layui-colla-title " th:text="${message.title }" th:accesskey="${message.id}"></h2>
             <div class="layui-colla-content">
@@ -22,14 +22,25 @@
 </div>
 <script th:replace="/common/template :: script"></script>
 <script>
-    layui.use(['element', 'layer'], function(){
+    layui.use(['element', 'layer', 'jquery'], function () {
         var element = layui.element;
         var layer = layui.layer;
+        var $ = layui.jquery;
 
         //监听折叠
-        element.on('collapse(test)', function(data){
-            console.info(data);
-            layer.msg('展开状态：'+ data.title.context.accessKey);e
+        element.on('collapse(msg)', function (data) {
+            if (data.show) {
+                var id = data.title.context.accessKey;
+                if (id == null || id == '') {
+                    return false;
+                }
+                $.get('/message/readed/' + id, function (res) {
+                    // layer.msg('展开状态：' + id + "成功读取消息：" + res);
+                    // layer.msg("成功读取消息："+data);
+                })
+            }else{
+                window.location.reload();
+            }
         });
     });
 </script>
