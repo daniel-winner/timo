@@ -1,9 +1,13 @@
 package com.crm.admin.record.domain;
 
+import com.crm.common.data.PageSort;
 import com.crm.common.utils.StatusUtil;
 import lombok.Data;
 import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
@@ -71,4 +75,6 @@ public class AccessRecord implements Serializable {
                 ", result=" + result +
                 '}';
     }
+
+
 }

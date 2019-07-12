@@ -73,7 +73,7 @@ public class CalledAllotController {
         model.addAttribute("users",allSales);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
-
+        System.err.println(calledAllot.toString());
         // 获取数据列表
         Example<CalledAllot> example = Example.of(calledAllot, matcher);
         Page<CalledAllot> list = calledAllotService.getPageList(example);

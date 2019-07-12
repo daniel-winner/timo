@@ -4,6 +4,8 @@ import com.crm.admin.calledallot.domain.CalledAllot;
 import com.crm.admin.calledallot.service.CalledAllotService;
 import com.crm.admin.record.domain.AccessRecord;
 import com.crm.admin.record.service.AccessRecordService;
+import com.crm.common.utils.EntityBeanUtil;
+import com.crm.common.utils.ResultVoUtil;
 import com.crm.component.shiro.ShiroUtil;
 import com.crm.modules.system.domain.User;
 import com.crm.modules.system.repository.UserRepository;
@@ -15,9 +17,7 @@ import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,15 +37,9 @@ public class CustomerController {
     @GetMapping("index")
     @RequiresPermissions("customer:index")
     public String index(Model model,CalledAllot calledAllot){
-        User subject = ShiroUtil.getSubject();
-        if (subject==null){
-            return "/login";
-        }
-        calledAllot.setUsername(subject.getUsername());
-        // 创建匹配器，进行动态查询匹配
+        calledAllot.setUsername(ShiroUtil.getSubject().getUsername());
+        calledAllot.setStatus((byte)1);
         ExampleMatcher matcher = ExampleMatcher.matching();
-        matcher.withMatcher("allotUser", new ExampleMatcher.GenericPropertyMatcher().exact());
-        // 获取数据列表
         Example<CalledAllot> example = Example.of(calledAllot, matcher);
         Page<CalledAllot> list = calledAllotService.getPageList(example);
         // 封装数据
@@ -72,6 +66,27 @@ public class CustomerController {
     }
 
     /**
+     * 跳转到编辑页面
+     */
+    @PostMapping("/edit")
+    @RequiresPermissions("customer:edit")
+    @ResponseBody
+    public Object toEdit( CalledAllot calledAllot) {
+        System.out.println(calledAllot.toString());
+        CalledAllot  allot =calledAllotService.getByCalledNum(calledAllot.getCalledNum());
+        if (allot==null){
+            return ResultVoUtil.error(-1,"更新用户信息失败，请重试");
+        }else {
+            allot.setRegisterrTime(calledAllot.getRegisterrTime());
+            allot.setIsRegister(calledAllot.getIsRegister());
+            allot.setRemake(calledAllot.getRemake());
+            calledAllotService.save(allot);
+        }
+
+        return ResultVoUtil.SAVE_SUCCESS;
+    }
+
+    /**
      * 跳转到详细页面
      */
     @GetMapping("/detail/{id}")
@@ -82,4 +97,6 @@ public class CustomerController {
         model.addAttribute("list", list);
         return "/calledallot/detail";
     }
+
+
 }

@@ -60,4 +60,6 @@ public interface CalledAllotService {
      * @return
      */
     public Map<String ,Integer> saveToCalledAllot(Row row, Date date);
+
+    Page<CalledAllot> getPageList(CalledAllot calledAllot);
 }

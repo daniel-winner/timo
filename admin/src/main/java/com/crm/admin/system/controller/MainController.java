@@ -97,7 +97,8 @@ public class MainController{
     @GetMapping("/index")
     @RequiresPermissions("index")
     public String index(Model model){
-        return "/system/main/index";
+//        return "/system/main/index";
+        return "/system/main/index_main";
     }
 
 

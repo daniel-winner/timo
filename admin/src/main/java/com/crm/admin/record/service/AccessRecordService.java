@@ -45,4 +45,5 @@ public interface AccessRecordService {
      * @return
      */
     List<AccessRecord> getByCalledNum(String calledNum);
+
 }

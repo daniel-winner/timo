@@ -146,7 +146,7 @@ public class CalledAllotServiceImpl implements CalledAllotService {
                     map.put("CalledAllot",1);
                 }
                 //添加访问记录
-                if(StringUtils.isNotBlank(lab)&&StringUtils.isNotBlank(type)&&StringUtils.isNotBlank(result)) {
+                if(StringUtils.isNotBlank(lab)&&StringUtils.isNotBlank(record)) {
                     AccessRecord accessRecord = new AccessRecord();
                     accessRecord.setUsername(username);
                     accessRecord.setCelledNum(calledNum);
@@ -184,5 +184,11 @@ public class CalledAllotServiceImpl implements CalledAllotService {
             default:b=0;
         }
         return b;
+    }
+
+    @Override
+    public Page<CalledAllot> getPageList(CalledAllot calledAllot) {
+        PageRequest page = PageSort.pageRequest();
+        return calledAllotRepository.findAll(page);
     }
 }

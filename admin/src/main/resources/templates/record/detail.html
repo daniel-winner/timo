@@ -12,28 +12,30 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>主键ID</th>
-                    <td th:text="${accessRecord.id}"></td>
                     <th>客户名称</th>
                     <td th:text="${accessRecord.customerName}"></td>
+                    <th>类型</th>
+                    <td th:if="${accessRecord.type==null }" ></td>
+                    <td th:each="enmu:${T(com.crm.common.enums.VisitType).values()}" th:if="${enmu.code eq accessRecord.type }" th:text="${enmu.lab}">类型</td>
                 </tr>
                 <tr>
                     <th>手机号</th>
                     <td th:text="${accessRecord.celledNum}"></td>
                     <th>标签</th>
-                    <td th:text="${accessRecord.lab}"></td>
+<!--                    <td th:text="${accessRecord.lab}"></td>-->
+                    <td th:if="${accessRecord.lab==null }"></td>
+                    <td th:each="enmu:${T(com.crm.common.enums.Laber).values()}" th:if="${enmu.code eq accessRecord.lab }" th:text="${enmu.lab}">标签</td>
                 </tr>
-                <tr>
-                    <th>类型</th>
-                    <td th:text="${accessRecord.type}"></td>
-                    <th>回访记录</th>
-                    <td th:text="${accessRecord.record}"></td>
-                </tr>
+
                 <tr>
                     <th>业务员</th>
                     <td th:text="${accessRecord.username}"></td>
                     <th>创建时间</th>
                     <td th:text="${#dates.format(accessRecord.createDate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                </tr>
+                <tr>
+                    <th>回访记录</th>
+                    <td th:text="${accessRecord.record}" colspan="3"></td>
                 </tr>
                 <tr>
                     <th>备注</th>

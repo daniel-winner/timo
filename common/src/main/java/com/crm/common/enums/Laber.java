@@ -1,6 +1,7 @@
 package com.crm.common.enums;
 
 public enum Laber {
+
     A_P(1,"A+"),
     A(2,"A"),
     B_P(3,"B+"),
@@ -8,7 +9,8 @@ public enum Laber {
     C(5,"C"),
     F(6,"F"),
     T(7,"T"),
-    S(8,"S");
+    S(8,"S"),
+    NILL(0,"");
 
 
     Laber() {

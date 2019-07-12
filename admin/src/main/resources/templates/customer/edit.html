@@ -10,7 +10,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">号码</label>
             <div class="layui-input-inline">
-                <input class="layui-input" disabled type="text" name="calledNum" placeholder="请输入号码" th:value="${calledAllot?.calledNum}">
+                <input class="layui-input" readonly="readonly" type="text" name="calledNum" placeholder="请输入号码" th:value="${calledAllot?.calledNum}">
             </div>
         </div>
         <div class="layui-form-item">
@@ -28,7 +28,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">备注</label>
             <div class="layui-input-inline">
-                <textarea placeholder="请输入内容" class="layui-textarea" name="remark">[[${calledAllot?.remake}]]</textarea>
+                <textarea placeholder="请输入内容" class="layui-textarea" name="remake">[[${calledAllot?.remake}]]</textarea>
             </div>
         </div>
 
@@ -39,6 +39,12 @@
     </form>
 </div>
 <script th:replace="/common/template :: script"></script>
-<script th:src="@{/crmjs/cellnumlib.js}" src="../static/crmjs/cellnumlib.js"></script>
+<script type="text/javascript">
+    layui.use([ 'laydate'], function () {
+        var laydate = layui.laydate;
+        laydate.render({elem: '#dateTime1',type: 'datetime' });
+    })
+
+</script>
 </body>
 </html>

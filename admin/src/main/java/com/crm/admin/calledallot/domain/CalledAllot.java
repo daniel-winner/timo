@@ -25,7 +25,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="crm_called_allot")
 @EntityListeners(AuditingEntityListener.class)
-@Where(clause = StatusUtil.notDelete)
+//@Where(clause = StatusUtil.notDelete)
 public class CalledAllot implements Serializable {
     // 主键ID
     @Id

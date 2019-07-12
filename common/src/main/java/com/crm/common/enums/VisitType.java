@@ -2,8 +2,9 @@ package com.crm.common.enums;
 
 public enum VisitType {
 
-    PHONE(1,"电话");
 
+    PHONE(1,"电话"),
+    NILL(0,"");
 
     VisitType() {
     }

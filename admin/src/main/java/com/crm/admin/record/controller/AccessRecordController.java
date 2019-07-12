@@ -14,6 +14,7 @@ import com.crm.component.shiro.ShiroUtil;
 import com.crm.modules.system.domain.User;
 import com.crm.modules.system.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
@@ -52,9 +53,10 @@ public class AccessRecordController {
     @RequiresPermissions("record:index")
     public String index(Model model, AccessRecord accessRecord) {
 
+        accessRecord.setStatus(null);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
-
+        System.err.println(accessRecord.toString());
         // 获取数据列表
         Example<AccessRecord> example = Example.of(accessRecord, matcher);
         Page<AccessRecord> list = accessRecordService.getPageList(example);
@@ -67,16 +69,6 @@ public class AccessRecordController {
         return "/record/index";
     }
 
-    /**
-     * 跳转到添加页面
-     */
-    @GetMapping("/add")
-    @RequiresPermissions("record:add")
-    public String toAdd(Model model) {
-        List<User> allSales = userService.getAllSales("6");
-        model.addAttribute("users",allSales);
-        return "/record/add";
-    }
 
     /**
      * 添加跳转到添加页面
@@ -109,32 +101,71 @@ public class AccessRecordController {
         model.addAttribute("accessRecord", accessRecord);
         return "/record/add";
     }
+    //保存修改的数据
+    @PostMapping("/edit")
+    @RequiresPermissions("record:edit")
+    public Object Edit(AccessRecord accessRecord) {
+        System.err.println(accessRecord.toString());
+        if (accessRecord.getId()==null){
+            return ResultVoUtil.error(-1,"未发现要修改的数据");
+        }
+        accessRecordService.save(accessRecord);
+        return ResultVoUtil.SAVE_SUCCESS;
+    }
 
     /**
-     * 保存添加/修改的数据
+     * 跳转到添加页面
+     */
+    @GetMapping("/add")
+    @RequiresPermissions("record:add")
+    public String toAdd(Model model) {
+        List<User> allSales = userService.getAllSales("6");
+        model.addAttribute("users",allSales);
+        return "/record/add";
+    }
+
+
+    /**
+     * 保存添加
      */
     @PostMapping("/add")
     @RequiresPermissions("record:add")
     @ResponseBody
     @Transactional
     public ResultVo save( AccessRecord accessRecord) {
-//        // 复制保留无需修改的数据
+        if(StringUtils.isBlank(accessRecord.getCelledNum())){
+            return ResultVoUtil.error(-1,"保存用户失败，号码为空");
+        }
+        accessRecord.setCreateDate(new Date());
+        accessRecord.setUsername(ShiroUtil.getSubject().getUsername());
+        // 保存数据
+        accessRecordService.save(accessRecord);
+        calledAllotService.updateCallsNumAddOne(accessRecord.getCelledNum());
+        return ResultVoUtil.SAVE_SUCCESS;
+    }
+//    @PostMapping("/add")
+//    @RequiresPermissions("record:add")
+//    @ResponseBody
+//    @Transactional
+//    public ResultVo save( AccessRecord accessRecord) {
+//        System.out.println(accessRecord.toString());
+////        // 复制保留无需修改的数据
 //        if (accessRecord.getId() != null) {
 //            AccessRecord beAccessRecord = accessRecordService.getById(accessRecord.getId());
 //            EntityBeanUtil.copyProperties(beAccessRecord, accessRecord);
 //        }
-        CalledAllot byCalledMun = calledAllotService.getByCalledNum(accessRecord.getCelledNum());
-        if(byCalledMun!=null) {
-            byCalledMun.setCallsNum(byCalledMun.getCallsNum() + 1);
-            calledAllotService.save(byCalledMun);
-        }
-        accessRecord.setCreateDate(new Date());
-        accessRecord.setUsername(ShiroUtil.getSubject().getUsername());
-        log.info(accessRecord.toString());
-        // 保存数据
-        accessRecordService.save(accessRecord);
-        return ResultVoUtil.SAVE_SUCCESS;
-    }
+//        CalledAllot byCalledMun = calledAllotService.getByCalledNum(accessRecord.getCelledNum());
+//        if(byCalledMun!=null) {
+//            byCalledMun.setCallsNum(byCalledMun.getCallsNum() + 1);
+//            calledAllotService.save(byCalledMun);
+//        }
+//        accessRecord.setCreateDate(new Date());
+//        accessRecord.setUsername(ShiroUtil.getSubject().getUsername());
+//        log.info(accessRecord.toString());
+//        // 保存数据
+//        accessRecordService.save(accessRecord);
+//        return ResultVoUtil.SAVE_SUCCESS;
+//    }
 
     /**
      * 跳转到详细页面
