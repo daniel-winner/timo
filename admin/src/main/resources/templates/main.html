@@ -22,7 +22,7 @@
             </li>-->
             <li class="layui-nav-item">
                 <a class="open-popup" data-title="未读消息" th:attr="data-url=@{/message/count}" data-size="680,600">
-                    <i class="fa fa-bell-o fa-lg"><span class="layui-badge-dot"></span></i>
+                    <i class="fa fa-bell-o fa-lg" id="msg"></i>
                 </a>
             </li>
             <li class="layui-nav-item">
@@ -34,7 +34,8 @@
                 <a class="timo-header-nickname" th:text="${user.nickname}"></a>
                 <div class="layui-nav-child">
                     <div class="timo-nav-child-box">
-                        <div><a class="open-popup" data-title="个人信息" th:attr="data-url=@{/userInfo}" data-size="680,464">
+                        <div><a class="open-popup" data-title="个人信息" th:attr="data-url=@{/userInfo}"
+                                data-size="680,464">
                             <i class="fa fa-user-o"></i>个人信息</a></div>
                         <div><a class="open-popup" data-title="修改密码" th:attr="data-url=@{/editPwd}" data-size="456,296">
                             <i class="fa fa-lock" style="font-size:17px;width:12px;"></i>修改密码</a></div>
@@ -87,5 +88,27 @@
     </div>
 </div>
 <script th:replace="/common/template :: script"></script>
+<script th:src="@{/js/plugins/jquery-3.3.1.min.js}" src="../static/js/plugins/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    setInterval("test()",10*1000);
+
+    function test() {
+        $.ajax({
+            url: '/message/get_news',
+            async: true,
+            type: 'get',
+            success: function (res) {
+                if(res.data!=null&&res.data!=0){
+                    $("#msg").append('<span class="layui-badge-dot"/>');
+                }else{
+                    $("#msg").children().remove();
+                }
+            }
+        })
+    }
+
+
+
+</script>
 </body>
 </html>

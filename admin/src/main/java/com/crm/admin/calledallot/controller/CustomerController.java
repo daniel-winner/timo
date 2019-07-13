@@ -72,7 +72,6 @@ public class CustomerController {
     @RequiresPermissions("customer:edit")
     @ResponseBody
     public Object toEdit( CalledAllot calledAllot) {
-        System.out.println(calledAllot.toString());
         CalledAllot  allot =calledAllotService.getByCalledNum(calledAllot.getCalledNum());
         if (allot==null){
             return ResultVoUtil.error(-1,"更新用户信息失败，请重试");

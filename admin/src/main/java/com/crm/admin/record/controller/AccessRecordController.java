@@ -56,7 +56,6 @@ public class AccessRecordController {
         accessRecord.setStatus(null);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
-        System.err.println(accessRecord.toString());
         // 获取数据列表
         Example<AccessRecord> example = Example.of(accessRecord, matcher);
         Page<AccessRecord> list = accessRecordService.getPageList(example);
@@ -105,7 +104,6 @@ public class AccessRecordController {
     @PostMapping("/edit")
     @RequiresPermissions("record:edit")
     public Object Edit(AccessRecord accessRecord) {
-        System.err.println(accessRecord.toString());
         if (accessRecord.getId()==null){
             return ResultVoUtil.error(-1,"未发现要修改的数据");
         }

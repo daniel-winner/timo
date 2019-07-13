@@ -3,6 +3,7 @@ package com.crm.admin.system.controller;
 import com.crm.admin.record.domain.AccessRecord;
 import com.crm.admin.system.message.Message;
 import com.crm.admin.system.message.MessageService;
+import com.crm.common.utils.ResultVoUtil;
 import com.crm.component.shiro.ShiroUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.rule.Mode;
@@ -35,6 +36,12 @@ public class MessageController {
 
         return "/system/message/message";
     }
+    @GetMapping("get_news")
+    @ResponseBody
+    public Object news(){
+        List<Message> messages = messageService.getNotReadMessages(ShiroUtil.getSubject().getUsername());
+        return ResultVoUtil.success(messages.size());
+    }
     @GetMapping("index")
     public String getMessagesPage(Model model,Message message){
         // 创建匹配器，进行动态查询匹配
@@ -57,7 +64,6 @@ public class MessageController {
     @GetMapping("readed/{id}")
     @ResponseBody
     public Integer readed(@PathVariable("id")String id){
-        System.err.println(id);
         return messageService.updateStatusById(Long.parseLong(id));
     }
 }

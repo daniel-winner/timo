@@ -46,8 +46,6 @@
                 <div class="pull-right screen-btn-group">
                     <button class="layui-btn open-popup-param" id="allot" data-title="名单分配" th:attr="data-url=@{/calledallot/calledAllot/allot}"  data-size="430,300">
                         <i class="fa fa-plus"></i> 名单分配</button>
-<!--                    <button class="layui-btn open-popup-param" data-type="radio" data-title="角色分配" th:attr="data-url=@{/system/user/role}" data-size="480,400">-->
-<!--                        <i class="fa fa-user-secret"></i> 角色分配</button>-->
 
                     <button class="layui-btn" id="upload" data-title="名单导入" th:attr="data-url=@{/calledallot/calledAllot/add}">
                     <i class="fa fa-plus"></i> 名单导入</button>
@@ -89,6 +87,8 @@
                         <td th:text="${item.position}">职位</td>
                         <td th:text="${item.companyName}">公司</td>
                         <td th:text="${item.username}">业务员</td>
+<!--                        <td th:text="${item.username}">业务员</td>-->
+<!--                        <td th:each="user:${users}" th:if="user.username eq item.username" th:text="user.nickname">业务员</td>-->
                         <td th:text="${item.isRegister}==1?'是':'否'">是否在紧商网注册</td>
                         <td th:text="${#dates.format(item.registerrTime,'yyyy-MM-dd HH:mm:ss')}">在紧商网注册时间</td>
                         <td th:text="${item.callsNum}">访问次数</td>

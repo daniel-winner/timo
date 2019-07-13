@@ -40,7 +40,6 @@ public class MessageServiceImpl implements MessageService{
 //        Pageable pageable= new PageRequest(0, 20, new Sort(orders));
         Pageable pageable = new PageRequest(0, 20,new Sort(Sort.Direction.ASC,"create_time"));
         Page<Message> messages = messageRepository.findAll(pageable);
-        messages.getContent().forEach(message -> System.out.println(message.toString()));
         return messages.getContent();
     }
 

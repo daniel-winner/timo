@@ -69,17 +69,15 @@ public class CalledAllotController {
     public String index(Model model, CalledAllot calledAllot) {
 
         List<User> allSales = userService.getAllSales("6");
-//        List<User> allSales = userRepository.findAll();
         model.addAttribute("users",allSales);
         // 创建匹配器，进行动态查询匹配
         ExampleMatcher matcher = ExampleMatcher.matching();
-        System.err.println(calledAllot.toString());
         // 获取数据列表
         Example<CalledAllot> example = Example.of(calledAllot, matcher);
         Page<CalledAllot> list = calledAllotService.getPageList(example);
         List<CalledAllot> content = list.getContent();
         for (CalledAllot ca:content ) {
-            if(StringUtils.isNotBlank(ca.getUsername())){
+            if(StringUtils.isBlank(ca.getUsername())){
                 ca.setUsername(" ");
             }else {
                 for (User user:allSales ) {
@@ -116,7 +114,7 @@ public class CalledAllotController {
         return "/calledallot/allot";
     }
     /**
-     * 分配页面
+     * 分配
      */
     @PostMapping("/allot")
     @ResponseBody
@@ -124,7 +122,6 @@ public class CalledAllotController {
     @Transactional
     public ResultVo editPassword(String username,
                                  @RequestParam(value = "ids", required = false) List<Long> ids){
-//                                 @RequestParam(value = "ids", required = false) List<CalledAllot> calledAllots)
         for(Long id:ids){
             CalledAllot byId = calledAllotService.getById(id);
             byId.setUsername(username);

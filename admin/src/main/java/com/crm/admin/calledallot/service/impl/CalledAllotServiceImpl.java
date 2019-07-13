@@ -137,7 +137,7 @@ public class CalledAllotServiceImpl implements CalledAllotService {
                     byCalledMun.setRegisterrTime(isRegister==null?null:registerTime);
                     byCalledMun.setUsername(username);
                     byCalledMun.setRemake(remark);
-                    byCalledMun.setAllotTime(allotTime);
+                    byCalledMun.setAllotTime(username==null?null:allotTime==null?new Date():allotTime);
                     byCalledMun.setInputTime(date);
                     byCalledMun.setInputUser(ShiroUtil.getSubject().getId());
                     byCalledMun.setCreateDate(date);
