@@ -9,7 +9,7 @@
     <name>业务模块</name>
 
     <parent>
-        <artifactId>timo</artifactId>
+        <artifactId>customer</artifactId>
         <groupId>com.crm</groupId>
         <version>2.0.1</version>
     </parent>

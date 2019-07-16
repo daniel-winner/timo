@@ -8,8 +8,6 @@ import com.crm.common.utils.DateTimeUtils;
 import com.crm.modules.system.domain.User;
 import com.crm.modules.system.service.UserService;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateFormatUtils;
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -39,7 +37,7 @@ public class MemberRegisterSynchronousSchedule {
     @Autowired
     private UserService userService;
 
-    //    @Scheduled(fixedDelay = 60000l)
+    @Scheduled(fixedDelay = 60000l)
     public void excule() throws ParseException {
 
         //获取所有运营部人员
